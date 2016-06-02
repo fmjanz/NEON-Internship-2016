@@ -30,28 +30,28 @@ correctProblems <- function(problemFrame){
   
   for (i in 1:n){
     if ((problemFrame[i,1] != '') && (problemFrame[i,6] == 'M' || problemFrame[i,6] == 'O')){
-      newFrame[i,1] <- str_c(problemFrame[i,1],problemFrame[i,2]) #site Id
+      newFrame[i,1] <- str_c(problemFrame[i,1],'-',problemFrame[i,2]) #site Id
       newFrame[i,2] <- problemFrame[i,6] #horizon
       newFrame[i,3] <- problemFrame[i,4] #x coordinates
       newFrame[i,4] <- problemFrame[i,5] #y coordinates
       newFrame[i,5] <- problemFrame[i,7] #date
       newFrame[i,6] <- problemFrame[i,8] #old ID
     }else if ((problemFrame[i,1] != '') && (problemFrame[i,7] == 'M' || problemFrame[i,7] == 'O') && (!is.na(problemFrame[i,7]))){
-      newFrame[i,1] <- str_c(problemFrame[i,1],problemFrame[i,2]) #site Id
+      newFrame[i,1] <- str_c(problemFrame[i,1],'-',problemFrame[i,2]) #site Id
       newFrame[i,2] <- problemFrame[i,7] #horizon
       newFrame[i,3] <- problemFrame[i,4] #x coordinates
       newFrame[i,4] <- problemFrame[i,5] #y coordinates
       newFrame[i,5] <- problemFrame[i,6] #date
       newFrame[i,6] <- problemFrame[i,8] #old ID
     }else if ((problemFrame[i,1] == '') && (problemFrame[i,7] == 'M' || problemFrame[i,7] == 'O')){
-      newFrame[i,1] <- str_c(problemFrame[i,2],problemFrame[i,3]) #site ID
+      newFrame[i,1] <- str_c(problemFrame[i,2],'-',problemFrame[i,3]) #site ID
       newFrame[i,2] <- problemFrame[i,7] #horizon
       newFrame[i,3] <- problemFrame[i,5] #x coodinates
       newFrame[i,4] <- problemFrame[i,6] #y coordinates
       newFrame[i,6] <- problemFrame[i,8] #old ID
       newFrame[i,5] <- "DateMissing"
     } else if ((problemFrame[i,1] != '') && (problemFrame[i,4] == 'M' || problemFrame[i,4] == 'O')){
-      newFrame[i,1] <- str_c(problemFrame[i,1],problemFrame[i,2]) #site Id
+      newFrame[i,1] <- str_c(problemFrame[i,1],'-',problemFrame[i,2]) #site Id
       newFrame[i,2] <- problemFrame[i,4] #horizon
       newFrame[i,3] <- problemFrame[i,5] #x coordinates
       newFrame[i,4] <- problemFrame[i,6] #y coordinates
@@ -133,7 +133,7 @@ standardizeSamples <- function (file){
   }
   
   fixedProblems <- correctProblems(problemIDs)
-  colnames(fixedProblems) <- c('V1','V2','V3','V4','V5','V6')
+  colnames(fixedProblems) <- c('V1','V2','V3','V4','V5','V6') #make col names the same for rbind
   colnames(fixedIDs) <- c('V1','V2','V3','V4','V5','V6')
   fixedIDs <- rbind(fixedProblems,fixedIDs)
   
