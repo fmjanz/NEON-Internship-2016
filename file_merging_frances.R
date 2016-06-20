@@ -39,9 +39,11 @@ multiCombine <- function(input, ply = ldply){
   )
 }
 
+
+
 # OPTION 2: a re-usable function - outputType can be 'vector' or 'list' 
 ## use if you need files in more than one folder
-fileParser <- function(directoryList, outputType = "vector"){
+#fileParser <- function(directoryList, outputType = "vector"){
   # need to dive into each folder, decide if it's a .csv or .xlsx, then read the rows
   fullFilenameList <- list() # initialize a list object to populate
   counter = 0
