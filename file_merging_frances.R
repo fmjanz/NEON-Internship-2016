@@ -1,23 +1,35 @@
 ##### SETUP #####
-install.packages(stringr)
-install.packages(plyr)
+#install.packages(stringr)
+#install.packages(plyr)
 
 library(stringr)
 library(plyr)
 
 # point to your folder with all the files
-directory <- "C:/francesFiles"
+directory <- "../Documents/GitHub/NEON-Internship-2016/fileMergeExample"
+
+## OPTION 1: if all of your files are in one folder, just set the working directory
+## R only automatically looks at files in a few folders all the time, including your 'working directory'
+setwd(directory)
 
 # list all of the files in your folder
-files <- list.files(directory, full.names = TRUE)
+files <- list.files(directory, full.names = FALSE)
+
+# check if it works -- open first file
+read.csv(files[1])
+
+## OPTION 2: if your files are in multiple folders, point to the 'root' folder and grab the full file path
+# files <- list.files(directory, full.names = TRUE)
 
 ###### CUSTOM FUNCTIONS ##### 
 # the file list here should point to "fileGrab1" for this specific script
 multiCombine <- function(input, ply = ldply){
   ply(input, function(x){
     t <- read.csv(x, header=TRUE, sep=",",stringsAsFactors = FALSE) # read the csv
-    ## append the fileName as a column ## FIX THIS ##
-    ## str_sub
+    ## see what x is
+    print(x)
+    ## append part of the fileName as a column ## FIX THIS ##
+    t$newCol <- str_sub(x, 1,3)
     t1 <- rbind(t) # rbind it to a temporary variable
     return(t1) # return the full variable
   }
@@ -48,12 +60,20 @@ fileParser <- function(directoryList, outputType = "vector"){
          return(fullFilenameList))
 }
 
-##### EXECUTE ##### 
+##### EXECUTE: Option 1 ##### 
+## if using setwd()
+storeIt <- multiCombine(files)
+
+
+##### EXECUTE: Option 2 ##### 
 ## parse the file paths into a vector
-fileList = fileParser(fileList)
+#fileList = fileParser(fileList)
 
 ## grep files that you want, if there is more than one type of file in the folder
-fileList_trim <- grep(pattern=".csv", x = fileList)
+#fileList_trim <- grep(pattern=".csv", x = fileList)
 
 # merge the individual files, as specified by fileList_trim, into one large data frame
-mergedFiles <- multiCombine(fileList_trim)
+#mergedFiles <- multiCombine(fileList_trim)
+
+
+##### Subset New Dataset

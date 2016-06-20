@@ -1,0 +1,82 @@
+measuredBy,recordedBy,neonDate,setDate,samplingProtocolVersion,domainID,project,siteID,plotID,subplotID,trapID,clipCellNumber,trapType,targetTaxaPresent,atagID,btagID,ctagID,dtagID,etagID,remarks
+aalvarado@neoninc.org,adavila@neoninc.org,20150407,2015-04-07,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_043,39,GUAN_043_562,562,Elevated,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150407,2015-04-07,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_043,41,GUAN_043_791,791,Ground,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150407,2015-04-07,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_044,23,GUAN_044_385,385,Elevated,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150407,2015-04-07,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_044,39,GUAN_044_646,646,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_043,41,GUAN_043_866,866,Elevated,yes,,,,,,Moved 1m N
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_052,23,GUAN_052_280,280,Elevated,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_052,23,GUAN_052_321,321,Ground,yes,,,,,,This Groundtrap was moved on 20150605 to GUAN_052_313
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_052,39,GUAN_052_706,706,Elevated,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_052,39,GUAN_052_698,698,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_054,39,GUAN_054_559,559,Elevated,yes,,,,,,Moved 1m N
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_054,39,GUAN_054_506,506,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_054,41,GUAN_054_880,880,Elevated,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_054,41,GUAN_054_823,823,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_060,21,GUAN_060_151,151,Elevated,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_060,21,GUAN_060_161,161,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_060,39,GUAN_060_673,673,Elevated,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150817,2015-08-17,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_050,41,GUAN_050_850,850,Elevated,yes,,,,,,
+adavila@neoninc.org,lrivera@field-ops.org,20150605,2015-06-05,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_052,23,GUAN_052_313,313,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_058,21,GUAN_058_054,054,Elevated,yes,,,,,,Moved 1m S
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_058,21,GUAN_058_178,178,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_058,39,GUAN_058_694,694,Elevated,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_058,39,GUAN_058_603,603,Ground,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_053,23,GUAN_053_405,405,Elevated,yes,,,,,,Elevated moved 0.20m S. No Ground trap deployed. Area was rocky.
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_053,39,GUAN_053_652,652,Elevated,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_053,39,GUAN_053_584,584,Ground,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_056,21,GUAN_056_062,062,Elevated,yes,,,,,,Moved 0.25m N
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_056,21,GUAN_056_138,138,Ground,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_056,39,GUAN_056_693,693,Elevated,yes,,,,,,Moved 0.40m S
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_056,39,GUAN_056_637,637,Ground,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_044,23,GUAN_044_367,367,Ground,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_044,39,GUAN_044_606,606,Elevated,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_047,21,GUAN_047_132,132,Elevated,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_047,21,GUAN_047_178,178,Ground,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_047,41,GUAN_047_935,935,Elevated,yes,,,,,,
+adavila@neoninc.org,adavila@neoninc.org,20150421,2015-04-21,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_047,41,GUAN_047_767,767,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_045,21,GUAN_045_132,132,Elevated,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_045,21,GUAN_045_063,063,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_045,41,GUAN_045_932,932,Elevated,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_045,41,GUAN_045_830,830,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_046,21,GUAN_046_021,021,Elevated,yes,,,,,,Moved 0.50m N
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_046,21,GUAN_046_189,189,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_046,41,GUAN_046_824,824,Elevated,yes,,,,,,Moved 0.70m S
+jaceituno@field-ops.org,adavila@neoninc.org,20150423,2015-04-23,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_046,41,GUAN_046_759,759,Ground,yes,,,,,,
+emartinez-mera@field-ops.org,adavila@neoninc.org,20150617,2015-06-17,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_053,23,GUAN_053_390,390,Ground,yes,,,,,,
+emartinez-mera@field-ops.org,adavila@neoninc.org,20150617,2015-06-17,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_042,39,GUAN_042_623,623,Ground,yes,,,,,,
+emartinez-mera@field-ops.org,adavila@neoninc.org,20150617,2015-06-17,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_042,21,GUAN_042_104,104,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_060,39,GUAN_060_662,662,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_051,21,GUAN_051_062,062,Elevated,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_051,21,GUAN_051_177,177,Ground,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_051,41,GUAN_051_803,803,Elevated,yes,,,,,,
+jaceituno@field-ops.org,adavila@neoninc.org,20150408,2015-04-08,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_051,41,GUAN_051_776,776,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_059,23,GUAN_059_381,381,Elevated,yes,,,,,,Moved 0.35m S
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_059,23,GUAN_059_451,451,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_059,39,GUAN_059_618,618,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_059,39,GUAN_059_658,658,Elevated,yes,,,,,,Moved 1m N
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_048,21,GUAN_048_062,062,Elevated,yes,,,,,,Moved 0.65m S
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_048,21,GUAN_048_040,040,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_048,41,GUAN_048_803,803,Elevated,yes,,,,,,Moved 0.3m N
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_048,41,GUAN_048_773,773,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_042,21,GUAN_042_162,162,Elevated,yes,,,,,,No Ground trap deployed. Area was rocky
+lrivera@field-ops.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_042,39,GUAN_042_700,700,Elevated,yes,,,,,,Elevated was moved 0.70m N. No Ground trap deployed. Area was rocky.
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_049,23,GUAN_049_280,280,Elevated,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_049,23,GUAN_049_356,356,Ground,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_049,39,GUAN_049_706,706,Elevated,yes,,,,,,Moved 0.60m N
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_049,39,GUAN_049_698,698,Ground,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_057,21,GUAN_057_196,196,Elevated,yes,,,,,,Moved 1m N
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_057,21,GUAN_057_151,151,Ground,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_057,39,GUAN_057_673,673,Elevated,yes,,,,,,Moved 1m N
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_057,39,GUAN_057_659,659,Ground,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_061,21,GUAN_061_054,054,Elevated,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_061,21,GUAN_061_178,178,Ground,yes,,,,,,
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_061,39,GUAN_061_694,694,Elevated,yes,,,,,,Moved 1m N
+aalvarado@neoninc.org,adavila@neoninc.org,20150409,2015-04-09,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_061,39,GUAN_061_709,709,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_050,21,GUAN_050_132,132,Elevated,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_050,21,GUAN_050_178,178,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_050,41,GUAN_050_860,860,Elevated,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_050,41,GUAN_050_935,935,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_055,23,GUAN_055_363,363,Elevated,yes,,,,,,Moved 0.20m N
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_055,23,GUAN_055_416,416,Ground,yes,,,,,,
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_055,41,GUAN_055_896,896,Elevated,yes,,,,,,Moved 1m N
+lrivera@field-ops.org,adavila@neoninc.org,20150413,2015-04-13,NEON.DOC.001710vB,D04,D04,GUAN,GUAN_055,41,GUAN_055_758,758,Ground,yes,,,,,,
