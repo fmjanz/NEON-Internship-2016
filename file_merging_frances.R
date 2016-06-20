@@ -4,9 +4,10 @@
 
 library(stringr)
 library(plyr)
+library(tidyr)
 
 # point to your folder with all the files
-directory <- "C:/Users/cflagg/Documents/GitHub/NEON-Internship-2016/taxonTables"
+directory <- "C:/Users/cflagg/Documents/GitHub/NEON-Internship-2016/MGRAST_DataSets"
 
 ## OPTION 1: if all of your files are in one folder, just set the working directory
 ## R only automatically looks at files in a few folders all the time, including your 'working directory'
@@ -24,6 +25,7 @@ head(read.table(files[1], header = TRUE, fill = TRUE, quote = "", sep="\t"))
 ###### CUSTOM FUNCTIONS ##### 
 # the file list here should point to "fileGrab1" for this specific script
 multiCombine <- function(input, ply = ldply){
+  tryCatch(
   ply(input, function(x){
     t <- read.table(x, header=TRUE, sep="\t",fill = TRUE, quote = "") # read the tsv
     ## see what x is
@@ -32,10 +34,14 @@ multiCombine <- function(input, ply = ldply){
     t$siteID <- stringr::str_sub(x, 1,4)
     ## add mgrast ID from file name
     t$mgrastID <- stringr::str_sub(x,1,10)
-    colnames(t) <- c("species", "count", "siteID", "mgrastID")
+    testOut <- colnames(storeIt)[2]
+    print(testOut)
+    t$sampleID <- testOut
+    colnames(t) <- c("species", "count", "siteID", "mgrastID", "sampleID")
     t1 <- rbind(t) # rbind it to a temporary variable
     return(t1) # return the full variable
   }
+  )
   )
 }
 
@@ -68,8 +74,14 @@ multiCombine <- function(input, ply = ldply){
 
 ##### EXECUTE: Option 1 ##### 
 ## if using setwd()
-storeIt <- multiCombine(files)
+output_taxa_merged <- multiCombine(files)
 
+
+## check if there are NA's
+table(is.na(output_taxa_merged$species)
+      
+## apply is.na
+table(apply(X = output_taxa_merged, 2, FUN = is.na))
 
 ##### EXECUTE: Option 2 ##### 
 ## parse the file paths into a vector
@@ -83,3 +95,6 @@ storeIt <- multiCombine(files)
 
 
 ##### Subset New Dataset
+## spread merged data on mgrastID
+spread(output_taxa_merged, mgrastID, count, )
+
