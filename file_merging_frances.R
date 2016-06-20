@@ -16,6 +16,12 @@ setwd(directory)
 # list all of the files in your folder
 files <- list.files(directory, full.names = FALSE)
 
+# try to merge the files sequentially
+file1 <- read.table(files[1], header = TRUE, fill = TRUE, quote = "", sep="\t")
+file2 <- read.table(files[2], header = TRUE, fill = TRUE, quote = "", sep="\t")
+joined_example <- merge(x = file1, y = file2, by=c("SampleID"))
+
+
 # check if it works -- open first file
 head(read.table(files[1], header = TRUE, fill = TRUE, quote = "", sep="\t"))
 
@@ -44,7 +50,6 @@ multiCombine <- function(input, ply = ldply){
   )
   )
 }
-
 
 
 # OPTION 2: a re-usable function - outputType can be 'vector' or 'list' 
