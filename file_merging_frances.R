@@ -6,7 +6,7 @@ library(stringr)
 library(plyr)
 
 # point to your folder with all the files
-directory <- "../Documents/GitHub/NEON-Internship-2016/fileMergeExample"
+directory <- "C:/Users/cflagg/Documents/GitHub/NEON-Internship-2016/fileMergeExample"
 
 ## OPTION 1: if all of your files are in one folder, just set the working directory
 ## R only automatically looks at files in a few folders all the time, including your 'working directory'
