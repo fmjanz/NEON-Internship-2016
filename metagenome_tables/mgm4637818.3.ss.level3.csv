@@ -1,0 +1,364 @@
+Subsystems.level3	mgm4637818.3
+2-Ketogluconate_Utilization;Carbohydrates;Monosaccharides;2-Ketogluconate_Utilization	1
+2-isocapryloyl-3R-hydroxymethyl-gamma-butyrolactone_and_other_bacterial_morphogens;Secondary Metabolism;Bacterial cytostatics, differentiation factors and antibiotics;2-isocapryloyl-3R-hydroxymethyl-gamma-butyrolactone_and_other_bacterial_morphogens	2
+5-FCL-like_protein;Cofactors, Vitamins, Prosthetic Groups, Pigments;Folate and pterines;5-FCL-like_protein	8773
+ATP-dependent_RNA_helicases,_bacterial;RNA Metabolism;RNA processing and modification;ATP-dependent_RNA_helicases,_bacterial	185
+Acetophenone_carboxylase_1;Metabolism of Aromatic Compounds;Anaerobic degradation of aromatic compounds;Acetophenone_carboxylase_1	114
+Acetyl-CoA_fermentation_to_Butyrate;Carbohydrates;Fermentation;Acetyl-CoA_fermentation_to_Butyrate	14
+Acyclic_terpenes_utilization;Fatty Acids, Lipids, and Isoprenoids;Isoprenoids;Acyclic_terpenes_utilization	36
+Acyl-CoA_thioesterase_II;Fatty Acids, Lipids, and Isoprenoids;Fatty acids;Acyl-CoA_thioesterase_II	15
+Adhesion_of_Campylobacter;Virulence, Disease and Defense;Adhesion;Adhesion_of_Campylobacter	1
+Alanine_biosynthesis;Amino Acids and Derivatives;Alanine, serine, and glycine;Alanine_biosynthesis	88
+Alkylphosphonate_utilization;Phosphorus Metabolism;-;Alkylphosphonate_utilization	112
+Allantoin_Utilization;Nitrogen Metabolism;-;Allantoin_Utilization	419
+Ammonia_assimilation;Nitrogen Metabolism;-;Ammonia_assimilation	9955
+Anaerobic_Oxidative_Degradation_of_L-Ornithine;Amino Acids and Derivatives;Arginine; urea cycle, polyamines;Anaerobic_Oxidative_Degradation_of_L-Ornithine	10
+Anaerobic_benzoate_metabolism;Metabolism of Aromatic Compounds;Anaerobic degradation of aromatic compounds;Anaerobic_benzoate_metabolism	1675
+Anaerobic_respiratory_reductases;Respiration;Electron accepting reactions;Anaerobic_respiratory_reductases	68
+Anaerobic_toluene_and_ethylbenzene_degradation;Metabolism of Aromatic Compounds;Anaerobic degradation of aromatic compounds;Anaerobic_toluene_and_ethylbenzene_degradation	114
+Aromatic_amino_acid_interconversions_with_aryl_acids;Amino Acids and Derivatives;Aromatic amino acids and derivatives;Aromatic_amino_acid_interconversions_with_aryl_acids	269
+Arsenic_resistance;Virulence, Disease and Defense;Resistance to antibiotics and toxic compounds;Arsenic_resistance	2
+At1g26220_At1g32070;Miscellaneous;Plant-Prokaryote DOE project;At1g26220_At1g32070	1
+At1g33290_At1g73170_At3g10420;Miscellaneous;Plant-Prokaryote DOE project;At1g33290_At1g73170_At3g10420	126
+At1g54520;Miscellaneous;Plant-Prokaryote DOE project;At1g54520	6
+At4g38090;Miscellaneous;Plant-Prokaryote DOE project;At4g38090	1
+At5g37530;Miscellaneous;Plant-Prokaryote DOE project;At5g37530	88
+Auxin_biosynthesis;Secondary Metabolism;Plant Hormones;Auxin_biosynthesis	2102
+Auxin_degradation;Secondary Metabolism;Plant Hormones;Auxin_degradation	1594
+Bacterial_Cell_Division;Clustering-based subsystems;-;Bacterial_Cell_Division	9863
+Bacterial_Cytoskeleton;Cell Division and Cell Cycle;-;Bacterial_Cytoskeleton	3973
+Bacterial_cyanide_production_and_tolerance_mechanisms;Virulence, Disease and Defense;-;Bacterial_cyanide_production_and_tolerance_mechanisms	1
+Benzoate_transport_and_degradation_cluster;Metabolism of Aromatic Compounds;-;Benzoate_transport_and_degradation_cluster	618
+Beta-Glucoside_Metabolism;Carbohydrates;Di- and oligosaccharides;Beta-Glucoside_Metabolism	1
+Beta-lactamase;Virulence, Disease and Defense;Resistance to antibiotics and toxic compounds;Beta-lactamase	1
+Beta-lactamase_cluster_in_Streptococcus;Clustering-based subsystems;Carbohydrates;Beta-lactamase_cluster_in_Streptococcus	126
+Betaine_biosynthesis_from_glycine;Stress Response;Osmotic stress;Betaine_biosynthesis_from_glycine	9
+Biogenesis_of_cbb3-type_cytochrome_c_oxidases;Respiration;-;Biogenesis_of_cbb3-type_cytochrome_c_oxidases	43
+Biogenesis_of_cytochrome_c_oxidases;Respiration;-;Biogenesis_of_cytochrome_c_oxidases	88
+Biotin_biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Biotin;Biotin_biosynthesis	541
+Biotin_biosynthesis_Experimental;Miscellaneous;Plant-Prokaryote DOE project;Biotin_biosynthesis_Experimental	541
+Branched-Chain_Amino_Acid_Biosynthesis;Amino Acids and Derivatives;Branched-chain amino acids;Branched-Chain_Amino_Acid_Biosynthesis	4024
+Branched_chain_amino_acid_degradation_regulons;Amino Acids and Derivatives;Branched-chain amino acids;Branched_chain_amino_acid_degradation_regulons	3728
+Butanol_Biosynthesis;Carbohydrates;Fermentation;Butanol_Biosynthesis	126
+CBSS-176299.4.peg.1292;Clustering-based subsystems;Probably GTP or GMP signaling related;CBSS-176299.4.peg.1292	25
+CBSS-176299.4.peg.1996A;Clustering-based subsystems;-;CBSS-176299.4.peg.1996A	127
+CBSS-176299.4.peg.1996B;Clustering-based subsystems;-;CBSS-176299.4.peg.1996B	2004
+CBSS-196164.1.peg.1690;Clustering-based subsystems;Cytochrome biogenesis;CBSS-196164.1.peg.1690	2371
+CBSS-203122.12.peg.188;Phages, Prophages, Transposable elements, Plasmids;Transposable elements;CBSS-203122.12.peg.188	2
+CBSS-235.1.peg.567;Clustering-based subsystems;-;CBSS-235.1.peg.567	2
+CBSS-257314.1.peg.676;Clustering-based subsystems;Two related proteases;CBSS-257314.1.peg.676	2089
+CBSS-262316.1.peg.2929;Clustering-based subsystems;Catabolism of an unknown compound;CBSS-262316.1.peg.2929	604
+CBSS-269482.1.peg.1294;Clustering-based subsystems;Probably organic hydroperoxide resistance related hypothetical protein;CBSS-269482.1.peg.1294	1
+CBSS-314269.3.peg.1840;Clustering-based subsystems;-;CBSS-314269.3.peg.1840	331
+CBSS-316057.3.peg.659;Clustering-based subsystems;Probably Ybbk-related hypothetical membrane proteins;CBSS-316057.3.peg.659	35
+CBSS-316273.3.peg.2378;Clustering-based subsystems;-;CBSS-316273.3.peg.2378	21
+CBSS-342610.3.peg.1794;Clustering-based subsystems;-;CBSS-342610.3.peg.1794	906
+CBSS-393121.3.peg.2760;Clustering-based subsystems;Protein export?;CBSS-393121.3.peg.2760	1
+CBSS-393130.3.peg.129;Clustering-based subsystems;Related to Menaquinone-cytochrome C reductase ;CBSS-393130.3.peg.129	331
+CBSS-393131.3.peg.612;Clustering-based subsystems;-;CBSS-393131.3.peg.612	1
+CBSS-52598.3.peg.2843;Clustering-based subsystems;alpha-proteobacterial cluster of hypotheticals;CBSS-52598.3.peg.2843	134
+CBSS-56780.10.peg.1536;Clustering-based subsystems;-;CBSS-56780.10.peg.1536	974
+CBSS-83331.1.peg.3039;Clustering-based subsystems;Isoprenoid/cell wall biosynthesis: PREDICTED UNDECAPRENYL DIPHOSPHATE PHOSPHATASE;CBSS-83331.1.peg.3039	2008
+CBSS-83332.1.peg.3803;Clustering-based subsystems;-;CBSS-83332.1.peg.3803	2461
+CBSS-84588.1.peg.1247;Clustering-based subsystems;Lysine, threonine, methionine, and cysteine;CBSS-84588.1.peg.1247	88
+CO2_uptake,_carboxysome;Carbohydrates;CO2 fixation;CO2_uptake,_carboxysome	116
+COG0523;Miscellaneous;Plant-Prokaryote DOE project;COG0523	949
+COG1836;Miscellaneous;Plant-Prokaryote DOE project;COG1836	2008
+COG2302;Miscellaneous;Plant-Prokaryote DOE project;COG2302	1875
+COG2363;Miscellaneous;Plant-Prokaryote DOE project;COG2363	1403
+COG3380_COG2907;Miscellaneous;Plant-Prokaryote DOE project;COG3380_COG2907	3
+COG3533;Miscellaneous;Plant-Prokaryote DOE project;COG3533	521
+CO_Dehydrogenase;Respiration;Electron donating reactions;CO_Dehydrogenase	331
+CTP_synthase_(EC_6.3.4.2)_cluster;Clustering-based subsystems;-;CTP_synthase_(EC_6.3.4.2)_cluster	2844
+Calvin-Benson_cycle;Carbohydrates;CO2 fixation;Calvin-Benson_cycle	1216
+Carboxysome;Carbohydrates;CO2 fixation;Carboxysome	113
+Catechol_branch_of_beta-ketoadipate_pathway;Metabolism of Aromatic Compounds;Metabolism of central aromatic intermediates;Catechol_branch_of_beta-ketoadipate_pathway	523
+Cell_Division_Cluster;Clustering-based subsystems;Cell Division;Cell_Division_Cluster	1875
+Cell_division-ribosomal_stress_proteins_cluster;Clustering-based subsystems;-;Cell_division-ribosomal_stress_proteins_cluster	8070
+Central_meta-cleavage_pathway_of_aromatic_compound_degradation;Metabolism of Aromatic Compounds;Metabolism of central aromatic intermediates;Central_meta-cleavage_pathway_of_aromatic_compound_degradation	248
+Chlorobenzoate_degradation;Metabolism of Aromatic Compounds;Peripheral pathways for catabolism of aromatic compounds;Chlorobenzoate_degradation	3
+Chlorophyll_Biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Tetrapyrroles;Chlorophyll_Biosynthesis	53
+Cholesterol_catabolic_operon_in_Mycobacteria;Fatty Acids, Lipids, and Isoprenoids;-;Cholesterol_catabolic_operon_in_Mycobacteria	12
+Choline_Transport;Membrane Transport;-;Choline_Transport	7
+Chorismate:_Intermediate_for_synthesis_of_Tryptophan,_PAPA_antibiotics,_PABA,_3-hydroxyanthranilate_and_more.;Amino Acids and Derivatives;Aromatic amino acids and derivatives;Chorismate:_Intermediate_for_synthesis_of_Tryptophan,_PAPA_antibiotics,_PABA,_3-hydroxyanthranilate_and_more.	3119
+Chorismate_Synthesis;Amino Acids and Derivatives;Aromatic amino acids and derivatives;Chorismate_Synthesis	848
+Cinnamic_Acid_Degradation;Secondary Metabolism;Aromatic amino acids and derivatives;Cinnamic_Acid_Degradation	1
+Citrate_Utilization_System_(CitAB,_CitH,_and_tctABC);Membrane Transport;-;Citrate_Utilization_System_(CitAB,_CitH,_and_tctABC)	229
+ClpAS_cluster;Clustering-based subsystems;-;ClpAS_cluster	2004
+Cluster-based_Subsystem_Grouping_Hypotheticals_-_perhaps_Proteosome_Related;Clustering-based subsystems;proteosome related;Cluster-based_Subsystem_Grouping_Hypotheticals_-_perhaps_Proteosome_Related	1596
+Cluster_co-expressed_with_butyrate_metabolism_cluster;Clustering-based subsystems;-;Cluster_co-expressed_with_butyrate_metabolism_cluster	1
+Cluster_containing_CofD-like_protein_and_co-occuring_with_DNA_repair;Clustering-based subsystems;-;Cluster_containing_CofD-like_protein_and_co-occuring_with_DNA_repair	134
+Coenzyme_A_Biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Coenzyme A;Coenzyme_A_Biosynthesis	1612
+Coenzyme_B12_biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Tetrapyrroles;Coenzyme_B12_biosynthesis	1243
+Coenzyme_F420_synthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Coenzyme F420;Coenzyme_F420_synthesis	1872
+Coenzyme_PQQ_synthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Quinone cofactors;Coenzyme_PQQ_synthesis	327
+Common_Pathway_For_Synthesis_of_Aromatic_Compounds_(DAHP_synthase_to_chorismate);Amino Acids and Derivatives;Aromatic amino acids and derivatives;Common_Pathway_For_Synthesis_of_Aromatic_Compounds_(DAHP_synthase_to_chorismate)	848
+Competence_or_DNA_damage-inducible_protein_CinA_and_related_protein_families;Miscellaneous;Plant-Prokaryote DOE project;Competence_or_DNA_damage-inducible_protein_CinA_and_related_protein_families	2086
+Conjugative_transfer;Membrane Transport;Protein and nucleoprotein secretion system, Type IV;Conjugative_transfer	53
+Conjugative_transfer_related_cluster;Clustering-based subsystems;-;Conjugative_transfer_related_cluster	4
+Conjugative_transposon,_Bacteroidales;Phages, Prophages, Transposable elements, Plasmids;Transposable elements;Conjugative_transposon,_Bacteroidales	34
+Conserved_gene_cluster_associated_with_Met-tRNA_formyltransferase;Clustering-based subsystems;-;Conserved_gene_cluster_associated_with_Met-tRNA_formyltransferase	1
+Conserved_gene_cluster_possibly_involved_in_RNA_metabolism;Miscellaneous;Plant-Prokaryote DOE project;Conserved_gene_cluster_possibly_involved_in_RNA_metabolism	121
+Creatine_and_Creatinine_Degradation;Amino Acids and Derivatives;-;Creatine_and_Creatinine_Degradation	4
+Cyanate_hydrolysis;Nitrogen Metabolism;-;Cyanate_hydrolysis	239
+Cysteine_Biosynthesis;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Cysteine_Biosynthesis	885
+Cytochrome_B6-F_complex;Respiration;-;Cytochrome_B6-F_complex	13
+D-Galacturonate_and_D-Glucuronate_Utilization;Carbohydrates;Monosaccharides;D-Galacturonate_and_D-Glucuronate_Utilization	29
+D-Sorbitol(D-Glucitol)_and_L-Sorbose_Utilization;Carbohydrates;Monosaccharides;D-Sorbitol(D-Glucitol)_and_L-Sorbose_Utilization	53
+D-galactarate,_D-glucarate_and_D-glycerate_catabolism;Carbohydrates;Monosaccharides;D-galactarate,_D-glucarate_and_D-glycerate_catabolism	303
+DNA-replication;DNA Metabolism;DNA replication;DNA-replication	2106
+DNA_Repair_Base_Excision;DNA Metabolism;DNA repair;DNA_Repair_Base_Excision	176
+DNA_gyrase_subunits;Clustering-based subsystems;-;DNA_gyrase_subunits	3027
+DNA_repair,_UvrABC_system;DNA Metabolism;DNA repair;DNA_repair,_UvrABC_system	11476
+DNA_repair,_bacterial;DNA Metabolism;DNA repair;DNA_repair,_bacterial	2086
+DNA_repair,_bacterial_RecBCD_pathway;DNA Metabolism;DNA repair;DNA_repair,_bacterial_RecBCD_pathway	59
+DNA_repair,_bacterial_RecFOR_pathway;DNA Metabolism;DNA repair;DNA_repair,_bacterial_RecFOR_pathway	2086
+DNA_repair,_bacterial_UmuCD_system;DNA Metabolism;DNA repair;DNA_repair,_bacterial_UmuCD_system	2086
+DNA_replication_cluster_1;Clustering-based subsystems;-;DNA_replication_cluster_1	3027
+DNA_topoisomerases,_Type_II,_ATP-dependent;DNA Metabolism;DNA replication;DNA_topoisomerases,_Type_II,_ATP-dependent	3989
+De_Novo_Pyrimidine_Synthesis;Nucleosides and Nucleotides;Pyrimidines;De_Novo_Pyrimidine_Synthesis	151
+Dehydrogenase_complexes;Carbohydrates;Central carbohydrate metabolism;Dehydrogenase_complexes	3014
+Denitrification;Nitrogen Metabolism;-;Denitrification	2
+Dipicolinate_Synthesis;Dormancy and Sporulation;Spore DNA protection;Dipicolinate_Synthesis	1
+Dot-Icm_type_IV_secretion_system;Membrane Transport;Protein and nucleoprotein secretion system, Type IV;Dot-Icm_type_IV_secretion_system	7
+ECF_class_transporters;Membrane Transport;-;ECF_class_transporters	12
+ESAT-6_proteins_secretion_system_in_Actinobacteria;Membrane Transport;Protein translocation across cytoplasmic membrane;ESAT-6_proteins_secretion_system_in_Actinobacteria	17
+Entner-Doudoroff_Pathway;Carbohydrates;Central carbohydrate metabolism;Entner-Doudoroff_Pathway	121
+Erythritol_utilization;Carbohydrates;Sugar alcohols;Erythritol_utilization	46
+Ethanolamine_utilization;Carbohydrates;Sugar alcohols;Ethanolamine_utilization	180
+Ethylmalonyl-CoA_pathway_of_C2_assimilation;Carbohydrates;Central carbohydrate metabolism;Ethylmalonyl-CoA_pathway_of_C2_assimilation	1951
+Experimental-COG2515;Miscellaneous;Plant-Prokaryote DOE project;Experimental-COG2515	242
+Experimental-yggC;Miscellaneous;Plant-Prokaryote DOE project;Experimental-yggC	1
+Experimental_-_Histidine_Degradation;Miscellaneous;Plant-Prokaryote DOE project;Experimental_-_Histidine_Degradation	5066
+F0F1-type_ATP_synthase;Respiration;ATP synthases;F0F1-type_ATP_synthase	4967
+Fatty_Acid_Biosynthesis_FASI;Fatty Acids, Lipids, and Isoprenoids;Fatty acids;Fatty_Acid_Biosynthesis_FASI	46
+Fatty_Acid_Biosynthesis_FASII;Fatty Acids, Lipids, and Isoprenoids;Fatty acids;Fatty_Acid_Biosynthesis_FASII	3056
+Fermentations:_Lactate;Carbohydrates;Fermentation;Fermentations:_Lactate	3339
+Fermentations:_Mixed_acid;Carbohydrates;Fermentation;Fermentations:_Mixed_acid	126
+Flagellum;Motility and Chemotaxis;Flagellar motility in Prokaryota;Flagellum	3661
+Folate_Biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Folate and pterines;Folate_Biosynthesis	389
+Formate_dehydrogenase;Respiration;Electron donating reactions;Formate_dehydrogenase	2
+Formate_hydrogenase;Respiration;-;Formate_hydrogenase	213
+G3E_family_of_P-loop_GTPases_(metallocenter_biosynthesis);Protein Metabolism;Protein processing and modification;G3E_family_of_P-loop_GTPases_(metallocenter_biosynthesis)	6563
+GABA_and_putrescine_metabolism_from_cluters;Clustering-based subsystems;Putrescine/GABA utilization cluster-temporal,to add to SSs;GABA_and_putrescine_metabolism_from_cluters	20
+Galactosylceramide_and_Sulfatide_metabolism;Sulfur Metabolism;-;Galactosylceramide_and_Sulfatide_metabolism	11
+Gene_Transfer_Agent;Phages, Prophages, Transposable elements, Plasmids;Gene Transfer Agent (GTA);Gene_Transfer_Agent	4
+Glutamate-mediated_methylamine_utilization_pathway;Clustering-based subsystems;Methylamine utilization;Glutamate-mediated_methylamine_utilization_pathway	9117
+Glutamate_dehydrogenases;Amino Acids and Derivatives;Glutamine, glutamate, aspartate, asparagine; ammonia assimilation;Glutamate_dehydrogenases	6
+Glutamate_transporter_involved_in_acid_tolerance_in_Streptococcus;Stress Response;Acid stress;Glutamate_transporter_involved_in_acid_tolerance_in_Streptococcus	40
+Glutamine,_Glutamate,_Aspartate_and_Asparagine_Biosynthesis;Amino Acids and Derivatives;Glutamine, glutamate, aspartate, asparagine; ammonia assimilation;Glutamine,_Glutamate,_Aspartate_and_Asparagine_Biosynthesis	9966
+Glutamine_synthetases;Amino Acids and Derivatives;Glutamine, glutamate, aspartate, asparagine; ammonia assimilation;Glutamine_synthetases	5125
+Glutathione-dependent_pathway_of_formaldehyde_detoxification;Stress Response;Detoxification;Glutathione-dependent_pathway_of_formaldehyde_detoxification	610
+Glutathione:_Biosynthesis_and_gamma-glutamyl_cycle;Stress Response;Oxidative stress;Glutathione:_Biosynthesis_and_gamma-glutamyl_cycle	20
+Glycerate_metabolism;Carbohydrates;Organic acids;Glycerate_metabolism	406
+Glycine_Biosynthesis;Amino Acids and Derivatives;Alanine, serine, and glycine;Glycine_Biosynthesis	2510
+Glycine_and_Serine_Utilization;Amino Acids and Derivatives;Alanine, serine, and glycine;Glycine_and_Serine_Utilization	4276
+Glycine_cleavage_system;Amino Acids and Derivatives;Alanine, serine, and glycine;Glycine_cleavage_system	1766
+Glycogen_metabolism;Carbohydrates;Polysaccharides;Glycogen_metabolism	6628
+Glycogen_metabolism_cluster;Clustering-based subsystems;-;Glycogen_metabolism_cluster	6628
+Glycolysis_and_Gluconeogenesis;Carbohydrates;Central carbohydrate metabolism;Glycolysis_and_Gluconeogenesis	1070
+Glyoxylate_bypass;Carbohydrates;Central carbohydrate metabolism;Glyoxylate_bypass	7742
+GroEL_GroES;Protein Metabolism;Protein folding;GroEL_GroES	5730
+HMG_CoA_Synthesis;Amino Acids and Derivatives;Branched-chain amino acids;HMG_CoA_Synthesis	2087
+Heat_shock_dnaK_gene_cluster_extended;Stress Response;Heat shock;Heat_shock_dnaK_gene_cluster_extended	8268
+Heme,_hemin_uptake_and_utilization_systems_in_GramNegatives;Iron acquisition and metabolism;-;Heme,_hemin_uptake_and_utilization_systems_in_GramNegatives	59
+Heme,_hemin_uptake_and_utilization_systems_in_GramPositives;Iron acquisition and metabolism;-;Heme,_hemin_uptake_and_utilization_systems_in_GramPositives	1
+Heme_and_Siroheme_Biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Tetrapyrroles;Heme_and_Siroheme_Biosynthesis	511
+Hemin_transport_system;Iron acquisition and metabolism;-;Hemin_transport_system	59
+Histidine_Degradation;Amino Acids and Derivatives;Histidine Metabolism;Histidine_Degradation	2556
+Hydrogenases;Respiration;Electron donating reactions;Hydrogenases	1052
+Indole-pyruvate_oxidoreductase_complex;Amino Acids and Derivatives;Aromatic amino acids and derivatives;Indole-pyruvate_oxidoreductase_complex	269
+Inorganic_Sulfur_Assimilation;Sulfur Metabolism;Inorganic sulfur assimilation;Inorganic_Sulfur_Assimilation	1436
+Inositol_catabolism;Carbohydrates;Sugar alcohols;Inositol_catabolism	236
+Iojap;Miscellaneous;Plant-Prokaryote DOE project;Iojap	3318
+Iron(III)_dicitrate_transport_system_Fec;Iron acquisition and metabolism;-;Iron(III)_dicitrate_transport_system_Fec	4
+Iron-sulfur_cluster_assembly;Miscellaneous;Plant-Prokaryote DOE project;Iron-sulfur_cluster_assembly	2460
+Isobutyryl-CoA_to_Propionyl-CoA_Module;Carbohydrates;Organic acids;Isobutyryl-CoA_to_Propionyl-CoA_Module	1118
+Isoleucine_degradation;Amino Acids and Derivatives;Branched-chain amino acids;Isoleucine_degradation	3
+Isoprenoid_Biosynthesis;Fatty Acids, Lipids, and Isoprenoids;Isoprenoids;Isoprenoid_Biosynthesis	2008
+Ketoisovalerate_oxidoreductase;Amino Acids and Derivatives;Branched-chain amino acids;Ketoisovalerate_oxidoreductase	5979
+L-Arabinose_utilization;Carbohydrates;Monosaccharides;L-Arabinose_utilization	522
+L-fucose_utilization;Carbohydrates;Monosaccharides;L-fucose_utilization	851
+L-fucose_utilization_temp;Carbohydrates;Monosaccharides;L-fucose_utilization_temp	784
+L-rhamnose_utilization;Carbohydrates;Monosaccharides;L-rhamnose_utilization	716
+LMPTP_YwlE_cluster;Clustering-based subsystems;-;LMPTP_YwlE_cluster	2510
+Leucine_Biosynthesis;Amino Acids and Derivatives;Branched-chain amino acids;Leucine_Biosynthesis	2412
+Leucine_Degradation_and_HMG-CoA_Metabolism;Amino Acids and Derivatives;Branched-chain amino acids;Leucine_Degradation_and_HMG-CoA_Metabolism	2613
+Lipid_A_modifications;Cell Wall and Capsule;Gram-Negative cell wall components;Lipid_A_modifications	20
+Listeria_Pathogenicity_Island_LIPI-1_extended;Phages, Prophages, Transposable elements, Plasmids;Pathogenicity islands;Listeria_Pathogenicity_Island_LIPI-1_extended	1
+Lysine_Biosynthesis_DAP_Pathway;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Lysine_Biosynthesis_DAP_Pathway	1
+Lysine_degradation;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Lysine_degradation	1133
+Lysine_fermentation;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Lysine_fermentation	1129
+Macromolecular_synthesis_operon;Cell Division and Cell Cycle;-;Macromolecular_synthesis_operon	3660
+Malonate_decarboxylase;Carbohydrates;Organic acids;Malonate_decarboxylase	55
+Mannitol_Utilization;Carbohydrates;Sugar alcohols;Mannitol_Utilization	212
+Mannose_Metabolism;Carbohydrates;Monosaccharides;Mannose_Metabolism	81
+Menaquinone_and_Phylloquinone_Biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Quinone cofactors;Menaquinone_and_Phylloquinone_Biosynthesis	577
+Methanopterin_biosynthesis2;Cofactors, Vitamins, Prosthetic Groups, Pigments;Folate and pterines;Methanopterin_biosynthesis2	5
+Methionine_Biosynthesis;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Methionine_Biosynthesis	5612
+Methionine_Degradation;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Methionine_Degradation	8626
+Methylcitrate_cycle;Carbohydrates;Organic acids;Methylcitrate_cycle	1781
+Na(+)-translocating_NADH-quinone_oxidoreductase_and_rnf-like_group_of_electron_transport_complexes;Respiration;Electron donating reactions;Na(+)-translocating_NADH-quinone_oxidoreductase_and_rnf-like_group_of_electron_transport_complexes	1
+Na+_translocating_decarboxylases_and_related_biotin-dependent_enzymes;Respiration;Sodium Ion-Coupled Energetics;Na+_translocating_decarboxylases_and_related_biotin-dependent_enzymes	5
+Naphtalene_and_antracene_degradation;Metabolism of Aromatic Compounds;Peripheral pathways for catabolism of aromatic compounds;Naphtalene_and_antracene_degradation	8
+NiFe_hydrogenase_maturation;Respiration;Electron donating reactions;NiFe_hydrogenase_maturation	482
+Nitrate_and_nitrite_ammonification;Nitrogen Metabolism;-;Nitrate_and_nitrite_ammonification	985
+Nitrogen_fixation;Nitrogen Metabolism;-;Nitrogen_fixation	4
+Novel_non-oxidative_pathway_of_Uracil_catabolism;Nucleosides and Nucleotides;Pyrimidines;Novel_non-oxidative_pathway_of_Uracil_catabolism	990
+Nucleolar_protein_complex;Protein Metabolism;Protein biosynthesis;Nucleolar_protein_complex	305
+Oxidative_stress;Stress Response;Oxidative stress;Oxidative_stress	2620
+PFGI-1-like_cluster_1;Clustering-based subsystems;-;PFGI-1-like_cluster_1	1
+PROSC;Miscellaneous;Plant-Prokaryote DOE project;PROSC	2510
+P_uptake_(cyanobacteria);Phosphorus Metabolism;-;P_uptake_(cyanobacteria)	974
+Pentose_phosphate_pathway;Carbohydrates;Central carbohydrate metabolism;Pentose_phosphate_pathway	3339
+Peptidoglycan_Biosynthesis;Cell Wall and Capsule;-;Peptidoglycan_Biosynthesis	5125
+Pertussis_toxin;Virulence, Disease and Defense;Toxins and superantigens;Pertussis_toxin	10
+Phage_capsid_proteins;Phages, Prophages, Transposable elements, Plasmids;Phages, Prophages;Phage_capsid_proteins	1
+Phage_replication;Phages, Prophages, Transposable elements, Plasmids;Phages, Prophages;Phage_replication	4
+Phage_tail_proteins_2;Phages, Prophages, Transposable elements, Plasmids;Phages, Prophages;Phage_tail_proteins_2	1
+Phenazine_biosynthesis;Secondary Metabolism;Bacterial cytostatics, differentiation factors and antibiotics;Phenazine_biosynthesis	2
+Phenol_hydroxylase;Metabolism of Aromatic Compounds;Peripheral pathways for catabolism of aromatic compounds;Phenol_hydroxylase	7
+Phenylacetyl-CoA_catabolic_pathway_(core);Metabolism of Aromatic Compounds;-;Phenylacetyl-CoA_catabolic_pathway_(core)	785
+Phenylpropionate_Degradation;Secondary Metabolism;Biosynthesis of phenylpropanoids;Phenylpropionate_Degradation	1
+Phosphate_metabolism;Phosphorus Metabolism;-;Phosphate_metabolism	3936
+Photorespiration_(oxidative_C2_cycle);Carbohydrates;CO2 fixation;Photorespiration_(oxidative_C2_cycle)	8746
+Photosystem_I;Photosynthesis;Electron transport and photophosphorylation;Photosystem_I	40
+Photosystem_II;Photosynthesis;Electron transport and photophosphorylation;Photosystem_II	28
+Photosystem_II-type_photosynthetic_reaction_center;Photosynthesis;Electron transport and photophosphorylation;Photosystem_II-type_photosynthetic_reaction_center	11
+Phycobilisome;Photosynthesis;Light-harvesting complexes;Phycobilisome	1
+Plasmid-encoded_T-DNA_transfer;Phages, Prophages, Transposable elements, Plasmids;Plasmid related functions;Plasmid-encoded_T-DNA_transfer	112
+Plasmid_replication;DNA Metabolism;DNA replication;Plasmid_replication	4
+Poly-gamma-glutamate_biosynthesis;Amino Acids and Derivatives;Glutamine, glutamate, aspartate, asparagine; ammonia assimilation;Poly-gamma-glutamate_biosynthesis	1
+Polyadenylation_specificity_factor;RNA Metabolism;RNA processing and modification;Polyadenylation_specificity_factor	1
+Polyamine_Metabolism;Amino Acids and Derivatives;Arginine; urea cycle, polyamines;Polyamine_Metabolism	1180
+Polyglycerolphosphate_lipoteichoic_acid_biosynthesis;Cell Wall and Capsule;Gram-Positive cell wall components;Polyglycerolphosphate_lipoteichoic_acid_biosynthesis	6
+Polyhydroxybutyrate_metabolism;Fatty Acids, Lipids, and Isoprenoids;-;Polyhydroxybutyrate_metabolism	59
+Potassium_homeostasis;Potassium metabolism;-;Potassium_homeostasis	740
+Propionate-CoA_to_Succinate_Module;Carbohydrates;Organic acids;Propionate-CoA_to_Succinate_Module	5356
+Propionyl-CoA_to_Succinyl-CoA_Module;Carbohydrates;Organic acids;Propionyl-CoA_to_Succinyl-CoA_Module	5463
+Proteasome_archaeal;Protein Metabolism;Protein degradation;Proteasome_archaeal	1604
+Proteasome_bacterial;Protein Metabolism;Protein degradation;Proteasome_bacterial	6683
+Proteasome_eukaryotic;Protein Metabolism;Protein degradation;Proteasome_eukaryotic	7
+Proteasome_subunit_alpha_archaeal_cluster;Clustering-based subsystems;Proteasome related clusters;Proteasome_subunit_alpha_archaeal_cluster	8
+Protection_from_Reactive_Oxygen_Species;Stress Response;Oxidative stress;Protection_from_Reactive_Oxygen_Species	2620
+Protein_Acetylation_and_Deacetylation_in_Bacteria;Protein Metabolism;Protein processing and modification;Protein_Acetylation_and_Deacetylation_in_Bacteria	6224
+Protein_chaperones;Protein Metabolism;Protein folding;Protein_chaperones	10074
+Proteolysis_in_bacteria,_ATP-dependent;Protein Metabolism;Protein degradation;Proteolysis_in_bacteria,_ATP-dependent	15187
+Protocatechuate_branch_of_beta-ketoadipate_pathway;Metabolism of Aromatic Compounds;Metabolism of central aromatic intermediates;Protocatechuate_branch_of_beta-ketoadipate_pathway	995
+Purine_conversions;Nucleosides and Nucleotides;Purines;Purine_conversions	16
+Putative_sulfate_assimilation_cluster;Clustering-based subsystems;-;Putative_sulfate_assimilation_cluster	39
+Putrescine_utilization_pathways;Amino Acids and Derivatives;Arginine; urea cycle, polyamines;Putrescine_utilization_pathways	1188
+Pyridoxin_(Vitamin_B6)_Biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Pyridoxine;Pyridoxin_(Vitamin_B6)_Biosynthesis	944
+Pyrimidine_utilization;Nucleosides and Nucleotides;Pyrimidines;Pyrimidine_utilization	151
+Pyrroloquinoline_Quinone_biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;Quinone cofactors;Pyrroloquinoline_Quinone_biosynthesis	327
+Pyruvate_metabolism_I:_anaplerotic_reactions,_PEP;Carbohydrates;Central carbohydrate metabolism;Pyruvate_metabolism_I:_anaplerotic_reactions,_PEP	1569
+Pyruvate_metabolism_II:_acetyl-CoA,_acetogenesis_from_pyruvate;Carbohydrates;Central carbohydrate metabolism;Pyruvate_metabolism_II:_acetyl-CoA,_acetogenesis_from_pyruvate	8993
+Queuosine-Archaeosine_Biosynthesis;RNA Metabolism;RNA processing and modification;Queuosine-Archaeosine_Biosynthesis	3
+Quorum_Sensing:_Autoinducer-2_Synthesis;Regulation and Cell signaling;Quorum sensing and biofilm formation;Quorum_Sensing:_Autoinducer-2_Synthesis	2298
+RNA_polymerase_I;RNA Metabolism;Transcription;RNA_polymerase_I	4
+RNA_polymerase_II;RNA Metabolism;Transcription;RNA_polymerase_II	1
+RNA_polymerase_III_initiation_factors;RNA Metabolism;Transcription;RNA_polymerase_III_initiation_factors	5
+RNA_polymerase_II_initiation_factors;RNA Metabolism;Transcription;RNA_polymerase_II_initiation_factors	8
+RNA_polymerase_archaeal;RNA Metabolism;Transcription;RNA_polymerase_archaeal	90
+RNA_polymerase_archaeal_initiation_factors;RNA Metabolism;Transcription;RNA_polymerase_archaeal_initiation_factors	5
+RNA_polymerase_bacterial;RNA Metabolism;Transcription;RNA_polymerase_bacterial	11937
+RNA_polymerase_chloroplast;RNA Metabolism;Transcription;RNA_polymerase_chloroplast	49
+Redox-dependent_regulation_of_nucleus_processes;Stress Response;Oxidative stress;Redox-dependent_regulation_of_nucleus_processes	158
+Regulation_of_Oxidative_Stress_Response;Stress Response;Oxidative stress;Regulation_of_Oxidative_Stress_Response	1594
+Regulatory_Intramembrane_Proteolysis_Pathways;Regulation and Cell signaling;Proteolytic pathway;Regulatory_Intramembrane_Proteolysis_Pathways	1
+Resistance_to_Vancomycin;Virulence, Disease and Defense;Resistance to antibiotics and toxic compounds;Resistance_to_Vancomycin	608
+Resistance_to_fluoroquinolones;Virulence, Disease and Defense;Resistance to antibiotics and toxic compounds;Resistance_to_fluoroquinolones	3933
+Respiratory_Complex_I;Respiration;Electron donating reactions;Respiratory_Complex_I	2241
+Restriction-Modification_System;DNA Metabolism;-;Restriction-Modification_System	1
+Ribonuclease_H;RNA Metabolism;RNA processing and modification;Ribonuclease_H	151
+Ribonucleotide_reductase_cluster;Clustering-based subsystems;-;Ribonucleotide_reductase_cluster	668
+Ribonucleotide_reduction;Nucleosides and Nucleotides;-;Ribonucleotide_reduction	4856
+Ribosomal_protein_S12p_Asp_methylthiotransferase;Protein Metabolism;Protein processing and modification;Ribosomal_protein_S12p_Asp_methylthiotransferase	501
+Ribosomal_protein_S5p_acylation;Protein Metabolism;Protein processing and modification;Ribosomal_protein_S5p_acylation	774
+Ribosome_LSU_bacterial;Protein Metabolism;Protein biosynthesis;Ribosome_LSU_bacterial	2583
+Ribosome_LSU_chloroplast;Protein Metabolism;Protein biosynthesis;Ribosome_LSU_chloroplast	4
+Ribosome_LSU_eukaryotic_and_archaeal;Protein Metabolism;Protein biosynthesis;Ribosome_LSU_eukaryotic_and_archaeal	3
+Ribosome_LSU_mitochondrial;Protein Metabolism;Protein biosynthesis;Ribosome_LSU_mitochondrial	1
+Ribosome_SSU_bacterial;Protein Metabolism;Protein biosynthesis;Ribosome_SSU_bacterial	5435
+Ribosome_SSU_chloroplast;Protein Metabolism;Protein biosynthesis;Ribosome_SSU_chloroplast	7
+Ribosome_SSU_eukaryotic_and_archaeal;Protein Metabolism;Protein biosynthesis;Ribosome_SSU_eukaryotic_and_archaeal	2
+Ribosome_SSU_mitochondrial;Protein Metabolism;Protein biosynthesis;Ribosome_SSU_mitochondrial	1
+Ribosome_biogenesis_bacterial;Protein Metabolism;Protein biosynthesis;Ribosome_biogenesis_bacterial	1
+Salicylate_and_gentisate_catabolism;Metabolism of Aromatic Compounds;Metabolism of central aromatic intermediates;Salicylate_and_gentisate_catabolism	27
+SecY2-SecA2_Specialized_Transport_System;Membrane Transport;Protein translocation across cytoplasmic membrane;SecY2-SecA2_Specialized_Transport_System	1
+Serine-glyoxylate_cycle;Carbohydrates;One-carbon Metabolism;Serine-glyoxylate_cycle	27867
+Serine_Biosynthesis;Amino Acids and Derivatives;Alanine, serine, and glycine;Serine_Biosynthesis	2510
+Serotype_determining_Capsular_polysaccharide_biosynthesis_in_Staphylococcus;Cell Wall and Capsule;Capsular and extracellular polysacchrides;Serotype_determining_Capsular_polysaccharide_biosynthesis_in_Staphylococcus	4
+Sialic_Acid_Metabolism;Cell Wall and Capsule;Capsular and extracellular polysacchrides;Sialic_Acid_Metabolism	68
+Siderophore_Anthrachelin;Iron acquisition and metabolism;Siderophores;Siderophore_Anthrachelin	1
+Siderophore_Pyoverdine;Iron acquisition and metabolism;Siderophores;Siderophore_Pyoverdine	6
+Siderophore_assembly_kit;Iron acquisition and metabolism;Siderophores;Siderophore_assembly_kit	59
+Single-Rhodanese-domain_proteins;Miscellaneous;Plant-Prokaryote DOE project;Single-Rhodanese-domain_proteins	20
+Small_acid-soluble_spore_proteins;Dormancy and Sporulation;Spore DNA protection;Small_acid-soluble_spore_proteins	3
+Soluble_cytochromes_and_functionally_related_electron_carriers;Respiration;-;Soluble_cytochromes_and_functionally_related_electron_carriers	97
+Soluble_methane_monooxygenase_(sMMO);Carbohydrates;Central carbohydrate metabolism;Soluble_methane_monooxygenase_(sMMO)	100
+Sphingolipid_biosynthesis;Fatty Acids, Lipids, and Isoprenoids;Phospholipids;Sphingolipid_biosynthesis	3
+Spliceosome;RNA Metabolism;RNA processing and modification;Spliceosome	8
+SpoVS_protein_family;Dormancy and Sporulation;-;SpoVS_protein_family	3
+Spore_germination;Dormancy and Sporulation;-;Spore_germination	1
+Sporulation-associated_proteins_with_broader_functions;Dormancy and Sporulation;-;Sporulation-associated_proteins_with_broader_functions	123
+Sporulation_Cluster_III_A;Dormancy and Sporulation;-;Sporulation_Cluster_III_A	3
+Sporulation_draft;Dormancy and Sporulation;-;Sporulation_draft	1
+Sporulation_gene_orphans;Dormancy and Sporulation;-;Sporulation_gene_orphans	5
+Staphylococcal_pathogenicity_islands_SaPI;Phages, Prophages, Transposable elements, Plasmids;Pathogenicity islands;Staphylococcal_pathogenicity_islands_SaPI	5742
+Staphylococcal_phi-Mu50B-like_prophages;Phages, Prophages, Transposable elements, Plasmids;Phages, Prophages;Staphylococcal_phi-Mu50B-like_prophages	2371
+Succinate_dehydrogenase;Respiration;Electron donating reactions;Succinate_dehydrogenase	5949
+Sugar_utilization_in_Thermotogales;Carbohydrates;-;Sugar_utilization_in_Thermotogales	1086
+Sulfur_oxidation;Sulfur Metabolism;-;Sulfur_oxidation	3
+Synechocystis_experimental;Miscellaneous;Plant-Prokaryote DOE project;Synechocystis_experimental	481
+Synthesis_of_osmoregulated_periplasmic_glucans;Stress Response;Osmotic stress;Synthesis_of_osmoregulated_periplasmic_glucans	3
+TCA_Cycle;Carbohydrates;Central carbohydrate metabolism;TCA_Cycle	15330
+Terminal_cytochrome_C_oxidases;Respiration;Electron accepting reactions;Terminal_cytochrome_C_oxidases	6712
+Terminal_cytochrome_O_ubiquinol_oxidase;Respiration;Electron accepting reactions;Terminal_cytochrome_O_ubiquinol_oxidase	283
+Terminal_cytochrome_oxidases;Respiration;Electron accepting reactions;Terminal_cytochrome_oxidases	283
+Thiamin_biosynthesis;Cofactors, Vitamins, Prosthetic Groups, Pigments;-;Thiamin_biosynthesis	1315
+Thioredoxin-disulfide_reductase;Sulfur Metabolism;-;Thioredoxin-disulfide_reductase	55
+Threonine_degradation;Amino Acids and Derivatives;Lysine, threonine, methionine, and cysteine;Threonine_degradation	134
+Ton_and_Tol_transport_systems;Membrane Transport;-;Ton_and_Tol_transport_systems	59
+Transcription_factors_bacterial;RNA Metabolism;Transcription;Transcription_factors_bacterial	1777
+Transcription_factors_cyanobacterial_RpoD-like_sigma_factors;RNA Metabolism;Transcription;Transcription_factors_cyanobacterial_RpoD-like_sigma_factors	3661
+Transcription_initiation,_bacterial_sigma_factors;RNA Metabolism;Transcription;Transcription_initiation,_bacterial_sigma_factors	4131
+Translation_elongation_factor_G_family;Protein Metabolism;Protein biosynthesis;Translation_elongation_factor_G_family	22
+Translation_elongation_factors_bacterial;Protein Metabolism;Protein biosynthesis;Translation_elongation_factors_bacterial	6332
+Translation_initiation_factors_eukaryotic_and_archaeal;Protein Metabolism;Protein biosynthesis;Translation_initiation_factors_eukaryotic_and_archaeal	8
+Translation_termination_factors_bacterial;Protein Metabolism;Protein biosynthesis;Translation_termination_factors_bacterial	422
+Transport_of_Manganese;Membrane Transport;-;Transport_of_Manganese	20
+Trehalose_Biosynthesis;Carbohydrates;Di- and oligosaccharides;Trehalose_Biosynthesis	9339
+Trehalose_Uptake_and_Utilization;Carbohydrates;Di- and oligosaccharides;Trehalose_Uptake_and_Utilization	81
+Tryptophan_synthesis;Amino Acids and Derivatives;Aromatic amino acids and derivatives;Tryptophan_synthesis	2101
+Type_VI_secretion_systems;Membrane Transport;Protein secretion system, Type VI;Type_VI_secretion_systems	5707
+USS-DB-7;Clustering-based subsystems;-;USS-DB-7	5707
+Ubiquinone_Menaquinone-cytochrome_c_reductase_complexes;Respiration;Electron accepting reactions;Ubiquinone_Menaquinone-cytochrome_c_reductase_complexes	330
+Universal_GTPases;Protein Metabolism;Protein biosynthesis;Universal_GTPases	6312
+Unspecified_monosaccharide_transport_cluster;Clustering-based subsystems;Monosaccharides;Unspecified_monosaccharide_transport_cluster	3
+Uracil-DNA_glycosylase;DNA Metabolism;DNA repair;Uracil-DNA_glycosylase	176
+Urea_decomposition;Amino Acids and Derivatives;Arginine; urea cycle, polyamines;Urea_decomposition	1894
+Urease_subunits;Amino Acids and Derivatives;Arginine; urea cycle, polyamines;Urease_subunits	1126
+V-Type_ATP_synthase;Respiration;ATP synthases;V-Type_ATP_synthase	62
+Valine_degradation;Amino Acids and Derivatives;Branched-chain amino acids;Valine_degradation	1121
+Vir-like_type_4_secretion_system;Membrane Transport;Protein and nucleoprotein secretion system, Type IV;Vir-like_type_4_secretion_system	112
+WhiB_and_WhiB-type_regulatory_proteins_;Regulation and Cell signaling;-;WhiB_and_WhiB-type_regulatory_proteins_	79
+Xanthan_Exopolysaccharide_Biosynthesis_and_Export;Cell Wall and Capsule;Capsular and extracellular polysacchrides;Xanthan_Exopolysaccharide_Biosynthesis_and_Export	2
+Xyloglucan_Utilization;Carbohydrates;Polysaccharides;Xyloglucan_Utilization	42
+Xylose_utilization;Carbohydrates;Monosaccharides;Xylose_utilization	1279
+YgfZ;Cofactors, Vitamins, Prosthetic Groups, Pigments;Folate and pterines;YgfZ	8555
+YgfZ-Iron;Cofactors, Vitamins, Prosthetic Groups, Pigments;Folate and pterines;YgfZ-Iron	229
+YrdC-YciO-Sua5_protein_family;Miscellaneous;Plant-Prokaryote DOE project;YrdC-YciO-Sua5_protein_family	2510
+cAMP_signaling_in_bacteria;Regulation and Cell signaling;-;cAMP_signaling_in_bacteria	2225
+eukaryotic_rRNA_modification_and_related_functions;RNA Metabolism;RNA processing and modification;eukaryotic_rRNA_modification_and_related_functions	305
+mnm5U34_biosynthesis_bacteria;RNA Metabolism;RNA processing and modification;mnm5U34_biosynthesis_bacteria	88
+mycolic_acid_synthesis;Cell Wall and Capsule;Cell wall of Mycobacteria;mycolic_acid_synthesis	218
+pVir_Plasmid_of_Campylobacter;Membrane Transport;Protein and nucleoprotein secretion system, Type IV;pVir_Plasmid_of_Campylobacter	102
+pyrimidine_conversions;Nucleosides and Nucleotides;Pyrimidines;pyrimidine_conversions	4031
+tRNA_aminoacylation,_Arg;Protein Metabolism;Protein biosynthesis;tRNA_aminoacylation,_Arg	3
+tRNA_aminoacylation,_Glu_and_Gln;Protein Metabolism;Protein biosynthesis;tRNA_aminoacylation,_Glu_and_Gln	1158
+tRNA_aminoacylation,_Gly;Protein Metabolism;Protein biosynthesis;tRNA_aminoacylation,_Gly	481
+tRNA_aminoacylation,_Ile;Protein Metabolism;Protein biosynthesis;tRNA_aminoacylation,_Ile	2
+tRNA_modification_Archaea;RNA Metabolism;RNA processing and modification;tRNA_modification_Archaea	88
+tRNA_modification_Bacteria;RNA Metabolism;RNA processing and modification;tRNA_modification_Bacteria	2371
+trimethylamine_N-oxide_(TMAO)_reductase;Respiration;Electron accepting reactions;trimethylamine_N-oxide_(TMAO)_reductase	13
