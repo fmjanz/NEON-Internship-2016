@@ -10,7 +10,8 @@
 library('stringr')
 library('lessR') #for Sort()
 library('vegan') #ecology functions
-library("dplyr") 
+library("dplyr")
+library("plyr") #for join()
 
 #merges two files by a specified column
 mergeData <- function(fileA, fileB){
@@ -64,8 +65,8 @@ t.otu <- function(x, s, e) {
 
 ## Set working directory
 if (file.exists(
-  "C:/Users/fjanz/Documents")){
-  setwd("C:/Users/fjanz/Documents")
+  "C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")){
+  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")
 }
 
 if (file.exists(
@@ -184,6 +185,9 @@ MGdiv <- as.data.frame(MGdiv)
 abundanceC <- as.data.frame(abundanceC)
 abundanceM <- as.data.frame(abundanceM)
 
+#-----------------------------------------------------------------------------------------------------------------------
+##### combine data ##### 
+
 #add names for merging
 MGplotnames <- rownames(MGotu_flip)
 Cplotnames <- rownames(Cotu_flip)
@@ -191,14 +195,11 @@ rownames(MGdiv) <- MGplotnames
 rownames(Cdiv) <- Cplotnames
 rownames(abundanceM) <- MGplotnames
 rownames(abundanceC) <- Cplotnames
-
-#-----------------------------------------------------------------------------------------------------------------------
-##### combine data ##### 
 sampleTypes <- matrix(nrow=END,ncol=2)
 sampleTypes[,1] <- rep("Individual",END)
 sampleTypes[,2] <- rep("Composite", END2)
 
-#create empty data frame for graphing
+#create empty data frames for graphing
 divDF <- data.frame(metagenomeID=as.character(),
                     sampleType=as.character(),
                     ShannonIndex=as.numeric(),
@@ -233,27 +234,42 @@ for(i in 1:e){
 }
 
 #create columns for easy sorting during graphing
-divDF <- merge(divDF,IDfile,by="metagenomeID")
+divDF <- merge(divDF,IDfile,by="metagenomeID") #the fields sampleID and Event_name come with IDfile
 divDF$siteID <- stringr::str_sub(divDF$sampleID,1,4)
 divDF$plotID <- stringr::str_sub(divDF$sampleID,1,8)
-### Need to create Event_name!!!
-ordered <- order(divDF$Event_name)
-divDF <- divDF[order(divDF$Event_name),]
 
+
+metadata <- divDF[order(divDF$metagenomeID),] #use with merged_OTU (see below)
+metadata <- metadata[,-3] #remove column with Shannon Index
+divDF <- divDF[order(divDF$Event_name),] #sort alpha diversity object
+
+#repeat for species richness object
 specRich <- merge(specRich,IDfile,by="metagenomeID")
 specRich$siteID <- stringr::str_sub(specRich$sampleID,1,4)
 specRich$plotID <- stringr::str_sub(specRich$sampleID,1,8)
 specRich <- specRich[order(specRich$Event_name),]
 
 #merge Individual and Composite OTU tables
-merged_OTU <- merge(MGotu,Cotu,by="Taxonomy")
+merged_OTU <- plyr::join(MGotu,Cotu,by="Taxonomy", type="full",match="all")
+merged_OTU[is.na(merged_OTU)] <- 0 #replace NAs with 0s
 
-metadata <- data.frame(IDs=divDF$metagenomeID,Events=divDF$Event_name)
-#order_metadata <- metadata[order(metadata$Events),]
-ordered_OTU <- order(metadata$Events)
+#organize beta diversity object
+temp_obj <- order(names(merged_OTU))
+merged_OTU <- merged_OTU[,temp_obj]
+
+#save beta diversity object to use with process_OTU_table.r
+if (file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")){
+  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")
+}else if (file.exists("/Users/lstanish/Github/NEON-Internship-2016")){
+  setwd("/Users/lstanish/Github/NEON-Internship-2016")
+}
+
+write.csv(merged_OTU,"Metagenome_beta_div_data.csv")
+write.csv(metadata,"Metagenome_beta_div_metadata.csv")
+
 
 #----------------------------------------------------------------------------------------------------------------------
-##### Graphs ####
+##### Graphs for alpha diversity ####
 
 
 library("ggplot2")
@@ -262,8 +278,8 @@ ggplot(divDF,aes(x=Event_name,y=ShannonIndex)) + facet_wrap(~siteID,3,scales="fr
 
 ggplot(specRich,aes(x=plotID,y=speciesRichness)) + facet_wrap(~siteID,3, scales="free") +
   geom_bar(aes(fill=sampleType),stat="identity",position="dodge") + scale_fill_manual(values=c("seashell","sandybrown"))
-#----------------------------------------------------------------------------------------------------------------------
 
+#----------------------------------------------------------------------------------------------------------------------
 ##### ANOVAS - Shannon Diversity #####
 
 # model1 <- lm(response ~ predictor_variable, data = data.frame)
@@ -287,18 +303,4 @@ summary(model2)
 summary(aShan)
 summary(aSR)
 
-##### line of best fit, x = continuous, y = continuous
-x1 <- rnorm(100) # fake predictor 
-noise <- rnorm(100, 1,2) # introduce 'natural variation'
-y1 <- x1*2.5 + noise # make a response value that is definitely related to x1
 
-####
-plot(x = x1, y = y1)
-testmod1 <- lm(y1 ~ x1)
-
-summary(testmod1)
-
-##### NMDS ##### 
-library(vegan)
-
-?? nms
