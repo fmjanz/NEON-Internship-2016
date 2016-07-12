@@ -26,11 +26,11 @@ cleanFile <- function(afile){
   return(afile)
 }
 
-#filters out non-microbial genomic data
+#filters out non-target genomic data
 cleanTaxon <- function (df){
   df <- filter(df,grepl("virus",df$Taxonomy)==FALSE)
   df <- filter(df,grepl("Eukaryota",df$Taxonomy)==FALSE)
-  df <- filter(df,grepl("Eukaryota",df$Taxonomy)==FALSE)
+  df <- filter(df,grepl("Archaea",df$Taxonomy)==FALSE)
   df <- filter(df,grepl("unclassified",df$Taxonomy)==FALSE)
   return(df)
 }
@@ -43,7 +43,7 @@ fill.taxonomy.newMG <- function(x) {
   
   #tax <- x[,1]
   tax <- x
-  alltax <- str_split_fixed(as.character(tax), pattern=";",n=6)
+  alltax <- str_split_fixed(as.character(tax), pattern=";",n=7)
   colnames(alltax) <- c("domain", "phylum", "class", "order", "family","genus", "species")
   alltax <- data.frame(alltax)
   return(alltax)
@@ -62,18 +62,37 @@ t.otu <- function(x, s, e) {
 #---------------------------------------------------------------------------------------------------------------------
 #Run main script
 
-setwd("C:/Users/fjanz/Documents")
+## Set working directory
+if (file.exists(
+  "C:/Users/fjanz/Documents")){
+  setwd("C:/Users/fjanz/Documents")
+}
+
+if (file.exists(
+  "/Users/lstanish/Github/NEON-Internship-2016")){
+  setwd("/Users/lstanish/Github/NEON-Internship-2016")
+}
+
 
 #read in file with ID mapping info
-IDfile <- read.csv("ID_mapping_file.csv")
+IDfile <- read.csv("SampleID_metadata/ID_mapping_file.csv")
 
 #remove uneeded columns
 IDfile <- IDfile[,-1]
 
-setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")
+if (file.exists(
+  "C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")){
+  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")
+  directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")
+  }
 
 #tell R where to look for things
-directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")
+if (file.exists(
+  "/Users/lstanish/Github/NEON-Internship-2016")){
+  setwd("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata/")
+  directory <- "/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata/"
+}
+
 files <- list.files(directory, full.names = FALSE)
 
 testFile <- readLines(files[1],2539)
@@ -101,7 +120,7 @@ for (i in 3:END){
 MGotu <- cleanTaxon(MGotu)
 
 #split out taxonomic info
-MGtaxa <- fill.taxonomy.newMG(MGotu)
+MGtaxa <- fill.taxonomy.newMG(MGotu$Taxonomy)
 
 #transpose columns and rows and organize to prep for diversity analysis
 MGotu_flip <- t.otu(x=MGotu,s=2,e=(END + 1))
@@ -109,8 +128,18 @@ MGotu_flip <- Sort(by=row.names,data=MGotu_flip)
 
 
 #repeat process for composite data
-setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
-directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
+if(file.exists(
+  "C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")) {
+  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
+  directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
+}
+
+if(file.exists(
+  "/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")) {
+  setwd("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
+  directory <- ("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
+}
+
 files <- list.files(directory, full.names = FALSE)
 
 file1 <- read.table(files[1],quote = "", sep='\t', skip = 2, header=TRUE)
@@ -128,7 +157,7 @@ for (i in 3:END2){
 }
 
 Cotu <- cleanTaxon(Cotu)
-Ctaxa <- fill.taxonomy.newMG(Cotu)
+Ctaxa <- fill.taxonomy.newMG(Cotu$Taxonomy)
 Cotu_flip <- t.otu(x=Cotu,s=2,e=(END2+1))
 Cotu_flip <- Sort(by=row.names,data=Cotu_flip)
 
@@ -207,6 +236,7 @@ for(i in 1:e){
 divDF <- merge(divDF,IDfile,by="metagenomeID")
 divDF$siteID <- stringr::str_sub(divDF$sampleID,1,4)
 divDF$plotID <- stringr::str_sub(divDF$sampleID,1,8)
+### Need to create Event_name!!!
 ordered <- order(divDF$Event_name)
 divDF <- divDF[order(divDF$Event_name),]
 
