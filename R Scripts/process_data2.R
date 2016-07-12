@@ -1,7 +1,7 @@
 #Frances Janz
 #NEON
 #Created: Jun 23, 2016
-#Updated: Jul 05, 2016
+#Updated: Jul 08, 2016
 
 #Script for processing the metagenome files from the contractor 
 
@@ -41,8 +41,9 @@ fill.taxonomy.newMG <- function(x) {
   ### Table should be read in as tab-separated .csv file.
   ### By Lee Stanish June 27, 2016
   
-  tax <- x[,1]
-  alltax <- str_split_fixed(as.character(tax), pattern=";",n=7)
+  #tax <- x[,1]
+  tax <- x
+  alltax <- str_split_fixed(as.character(tax), pattern=";",n=6)
   colnames(alltax) <- c("domain", "phylum", "class", "order", "family","genus", "species")
   alltax <- data.frame(alltax)
   return(alltax)
@@ -58,33 +59,10 @@ t.otu <- function(x, s, e) {
   x1
 }
 
-#creates 6 side-by-side graphs for data; specify colors as strings
-makeGraphs <- function(color1,color2,color3,color4){
-  leg <- c("Individual", "Composite") #legend names
-  par(mfrow=c(2,3))
-  sites <- c("CPER","DSNY","HARV","OSBS","STER","TALL")
-  
-  for (i in 1:(length(sites)-1)){
-    barplot(divDF$ShannonIndex[metadataDF$siteIDs==sites[i]],width=0.45,beside = FALSE,ylim=c(5.65,6.2),xlab=sites[i],ylab="Shannon Index",
-            horiz=F,xpd=F, las=1, col=c("lavender","seashell"),cex.lab = 1.5, cex.main = 1.4)
-  }
-  
-  barplot(divDF$ShannonIndex[metadataDF$siteIDs==sites[6]],width=0.45,beside = TRUE,ylim=c(5.65,6.2),xlab=sites[6],ylab="Shannon Index",
-          legend.text = leg, horiz=F,xpd=F, las=1, col=c(color1,color2),cex.lab = 1.5, cex.main = 1.4)
-  
-  for (i in 1:(length(sites)-1)){
-    barplot(abundance[metadataDF$siteIDs==sites[i]],width=0.45,beside = TRUE,ylim=c(1590,1760),xlab=sites[i],ylab="Species Richness",
-            horiz=F,xpd=F, las=1, col=c(color3,color4),cex.lab = 1.5, cex.main = 1.4)
-  }
-  
-  barplot(abundance[metadataDF$siteIDs==sites[6]],width=0.45,beside = TRUE,ylim=c(1590,1760),xlab=sites[6],ylab="Species Richness",
-          legend.text = leg, horiz=F,xpd=F, las=1, col=c(color3,color4),cex.lab = 1.5, cex.main = 1.4)
-}
-
 #---------------------------------------------------------------------------------------------------------------------
 #Run main script
 
-setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")
+setwd("C:/Users/fjanz/Documents")
 
 #read in file with ID mapping info
 IDfile <- read.csv("ID_mapping_file.csv")
@@ -126,7 +104,7 @@ MGotu <- cleanTaxon(MGotu)
 MGtaxa <- fill.taxonomy.newMG(MGotu)
 
 #transpose columns and rows and organize to prep for diversity analysis
-MGotu_flip <- t.otu(x=MGotu,s=2,e=END)
+MGotu_flip <- t.otu(x=MGotu,s=2,e=(END + 1))
 MGotu_flip <- Sort(by=row.names,data=MGotu_flip)
 
 
@@ -151,23 +129,22 @@ for (i in 3:END2){
 
 Cotu <- cleanTaxon(Cotu)
 Ctaxa <- fill.taxonomy.newMG(Cotu)
-Cotu_flip <- t.otu(x=Cotu,s=2,e=END2)
+Cotu_flip <- t.otu(x=Cotu,s=2,e=(END2+1))
 Cotu_flip <- Sort(by=row.names,data=Cotu_flip)
 
-
 #----------------------------------------------------------------------------------------------------------------------
-#Diversity analyses on all 37 files for each sample method
+##### Diversity analyses on all 38 files for each sample method #####
 
-Cdiv <- (rep(0,END2-1))
-abundanceC <- (rep(0,END2-1))
-for (i in 1:(END2-1)){
+Cdiv <- (rep(0,END2))
+abundanceC <- (rep(0,END2))
+for (i in 1:(END2)){
   Cdiv[i] <- diversity(as.numeric(Cotu_flip[i,]))
   abundanceC[i] <- specnumber(Cotu_flip[i,])
 }
 
-MGdiv <- (rep(0,END-1))
-abundanceM <- (rep(0,END-1))
-for (i in 1:(END-1)){
+MGdiv <- (rep(0,END))
+abundanceM <- (rep(0,END))
+for (i in 1:(END)){
   MGdiv[i] <- diversity(as.numeric(MGotu_flip[i,]))
   abundanceM[i] <- specnumber(MGotu_flip[i,])
 }
@@ -187,127 +164,111 @@ rownames(abundanceM) <- MGplotnames
 rownames(abundanceC) <- Cplotnames
 
 #-----------------------------------------------------------------------------------------------------------------------
-#combine data
-div <- as.matrix(cbind(MGdiv,Cdiv))
-abundance <- as.matrix(cbind(abundanceM,abundanceC))
-plotnames <- rownames(div)
-
-
-sampleTypes <- matrix(nrow=37,ncol=2)
-sampleTypes[,1] <- rep("Individual",37)
-sampleTypes[,2] <- rep("Composite", 37)
+##### combine data ##### 
+sampleTypes <- matrix(nrow=END,ncol=2)
+sampleTypes[,1] <- rep("Individual",END)
+sampleTypes[,2] <- rep("Composite", END2)
 
 #create empty data frame for graphing
-divDF <- data.frame(SiteID=as.character(),
-                    SampleType=as.character(),
+divDF <- data.frame(metagenomeID=as.character(),
+                    sampleType=as.character(),
                     ShannonIndex=as.numeric(),
                     stringsAsFactors = FALSE)
 
-e <- length(plotnames)*2 #number of samples
+specRich <- data.frame(metagenomeID=as.character(),
+                       sampleType=as.character(),
+                       speciesRichness=as.numeric(),
+                       stringsAsFactors = FALSE)
+
+e <- length(MGplotnames)*2 #number of samples
 j <- 1
 
 #fill graphing data frame
 for(i in 1:e){
   if (i <= (e/2)){
-    divDF[i,1] <- MGplotnames[i]
-    divDF[i,2] <- sampleTypes[i,1]
-    divDF[i,3] <- MGdiv[i,1]
+    divDF[i,1] <- MGplotnames[i] #create column of sample IDs
+    divDF[i,2] <- sampleTypes[i,1] #"Individual"
+    divDF[i,3] <- MGdiv[i,1] #diversity measure
+    specRich[i,1] <- MGplotnames[i]
+    specRich[i,2] <- sampleTypes[i,1]
+    specRich[i,3] <- abundanceM[i,1]
   } else {
     divDF[i,1] <- Cplotnames[j]
-    divDF[i,2] <- sampleTypes[j,2]
+    divDF[i,2] <- sampleTypes[j,2] #"Composite"
     divDF[i,3] <- Cdiv[j,1]
+    specRich[i,1] <- Cplotnames[j]
+    specRich[i,2] <- sampleTypes[j,2]
+    specRich[i,3] <- abundanceC[j,1]
     j <- j + 1
   }
 }
 
-divDF <- divDF + IDfile
+#create columns for easy sorting during graphing
+divDF <- merge(divDF,IDfile,by="metagenomeID")
+divDF$siteID <- stringr::str_sub(divDF$sampleID,1,4)
+divDF$plotID <- stringr::str_sub(divDF$sampleID,1,8)
+ordered <- order(divDF$Event_name)
+divDF <- divDF[order(divDF$Event_name),]
+
+specRich <- merge(specRich,IDfile,by="metagenomeID")
+specRich$siteID <- stringr::str_sub(specRich$sampleID,1,4)
+specRich$plotID <- stringr::str_sub(specRich$sampleID,1,8)
+specRich <- specRich[order(specRich$Event_name),]
+
+#merge Individual and Composite OTU tables
+merged_OTU <- merge(MGotu,Cotu,by="Taxonomy")
+
+metadata <- data.frame(IDs=divDF$metagenomeID,Events=divDF$Event_name)
+#order_metadata <- metadata[order(metadata$Events),]
+ordered_OTU <- order(metadata$Events)
 
 #----------------------------------------------------------------------------------------------------------------------
-#Graphs
+##### Graphs ####
 
-#create metadata object for sorting graphs by site ID
-
-siteIDs <- rep(NA, length(plotnames))
-for (i in 1:length(plotnames)){
-  siteIDs[i] <- substr(plotnames[i],1,4)
-}
-metadata <- cbind(plotnames,siteIDs)
-metadataDF <- as.data.frame(metadata)
-
-
-makeGraphs("wheat3","whitesmoke","sandybrown","seashell")
-
-
-
-getMeans <- function (divNum){
-  siteMeans <- rep(0,6)
-  siteMeans[1] <- mean(divNum[1:11])
-  siteMeans[2] <- mean(divNum[12:23])
-  siteMeans[3] <- mean(divNum[24:26])
-  siteMeans[4] <- mean(divNum[27:32])
-  siteMeans[5] <- mean(divNum[33:38])
-  siteMeans[6] <- mean(divNum[39])
-  return(siteMeans)
-}
-
-MGmean <- getMeans(MGdiv)
-Cmean <- getMeans(Cdiv)
-allMeans <- rbind(MGmean,Cmean)
-
-barplot(allMeans,width=0.5,beside = TRUE,xlim=c(0,12),ylim=c(5.7,7.0),ylab="Shannon Index",
-        legend.text = leg, horiz=F,xpd=F, las=1, col=c("maroon","gray"),cex.lab = 1.5, cex.main = 1.4)
-axis(side=1,labels= F,at=seq(0,6))
-
-
-xnum <- seq(1,84)
-plot(allMeans,main="Shannon",xlab = "Sites",
-     ylab="Shannon Index",type='b')
-par(new=T)
-plot(Cdiv[metadataDF$siteIDs=="TALL"], col="orange",axes = F,type='b',pch=2)
-
-MGdf <- as.data.frame(MGotu_flip)
-
-xnum <- seq(1,11)
-ynum <- seq(5,7)
-qplot(x=div[metadataDF$siteIDs=="CPER"])
-
-barplot(divDF$ShannonIndex[metadataDF$siteIDs=="CPER"],width=0.45,beside = TRUE,ylim=c(5.6,6.25),ylab="Shannon Index",
-        legend.text = leg, horiz=F,xpd=F, las=1, col=c("tomato","whitesmoke"),cex.lab = 1.5, cex.main = 1.4)
 
 library("ggplot2")
-ggplot(divDF,aes(x=SiteID,y=ShannonIndex, fill=SampleType,color=SampleType)) +
-  geom_bar(stat="identity",position="dodge")
+ggplot(divDF,aes(x=Event_name,y=ShannonIndex)) + facet_wrap(~siteID,3,scales="free") +
+  geom_bar(aes(fill=sampleType),stat="identity",position="dodge") + scale_fill_manual(values=c("seashell","sandybrown"))
 
+ggplot(specRich,aes(x=plotID,y=speciesRichness)) + facet_wrap(~siteID,3, scales="free") +
+  geom_bar(aes(fill=sampleType),stat="identity",position="dodge") + scale_fill_manual(values=c("seashell","sandybrown"))
 #----------------------------------------------------------------------------------------------------------------------
-split_IDs <- data.frame(data=rep(NA,e),row.names=NULL, check.rows = FALSE,
-                        check.names = FALSE, fix.empty.names = FALSE,
-                        stringsAsFactors = FALSE)
-#fix IDs!!!
-for (i in 1:e){
-  for (j in 1:9){
-    temp <- unlist(str_split(divDF[i,1],'[.]', n=9))
-    split_IDs[i,j] <- temp[j]
-  }
-}
 
-split_IDs <- split_IDs[,-9]
+##### ANOVAS - Shannon Diversity #####
 
-clean_IDs <- data.frame(Col1=character(),
-                        Col2=character(),
-                        Col3=character(),
-                        Col4=character(),
-                        Col5=character(),
-                        stringsAsFactors = FALSE)
-j <- 1
-for (i in 1:e){
-  if (split_IDs[i,3] == "Mineral" || split_IDs[i,3] == "M"){
-    clean_IDs[j,1] <- split_IDs[i,1]
-    clean_IDs[j,2] <- split_IDs[i,3]
-    clean_IDs[j,3] <- split_IDs[i,4]
-    clean_IDs[j,4] <- split_IDs[i,5]
-    clean_IDs[j,5] <- split_IDs[i,6]
-    j <- j + 1
-  } else if(is.numeric(){
-    
-  }
-}
+# model1 <- lm(response ~ predictor_variable, data = data.frame)
+# lm(dependent ~ independent)
+# lm(y ~ x)
+# lm(y ~ x1 + x2 + x3)
+
+##### Models ##### Best Practice: 10 data points per independent/predictor variable
+model1 <- lm(ShannonIndex ~ siteID + sampleType, data = divDF)
+model2 <- lm(speciesRichness ~ siteID + sampleType, data = specRich)
+# model2 <- lm(ShannonIndex ~ siteID + plotID + sampleType, data = divDF)
+
+
+library("stats")
+aShan <- aov(ShannonIndex ~ siteID + sampleType, data = divDF)
+aSR <- aov(speciesRichness ~ siteID + sampleType, data=specRich)
+
+##### Summaries
+summary(model1)
+summary(model2)
+summary(aShan)
+summary(aSR)
+
+##### line of best fit, x = continuous, y = continuous
+x1 <- rnorm(100) # fake predictor 
+noise <- rnorm(100, 1,2) # introduce 'natural variation'
+y1 <- x1*2.5 + noise # make a response value that is definitely related to x1
+
+####
+plot(x = x1, y = y1)
+testmod1 <- lm(y1 ~ x1)
+
+summary(testmod1)
+
+##### NMDS ##### 
+library(vegan)
+
+?? nms
