@@ -1,24 +1,19 @@
 #Frances Janz
-#NEON
-#Created: Jun 23, 2016
-#Updated: Jul 08, 2016
+#National Ecological Observatory Network
+#Adapted from process_data2.R
+#Created: Jul 14, 2016
+#Updated: Jul 15, 2016
 
-#Script for processing the metagenome files from the contractor 
+#Script for processing and analyzing functional tables from MG-RAST datasets 
 
-#----------------------------------------------------------------------------------------------------------------------
+
 #Load libraries and functions
 library('stringr')
-library('lessR') #for Sort()
-library('vegan') #ecology functions
 library("dplyr")
+library('lessR') #for Sort()
 library("plyr") #for join()
-
-#merges two files by a specified column
-mergeData <- function(fileA, fileB){
-  combinedData <- merge(x = fileA, y = fileB, by="Taxonomy", all=TRUE)
-  combinedData[is.na(combinedData)] <- 0 #replace NAs with 0s
-  return(combinedData)
-}
+library('vegan') #diversity()
+library("asbio") #evenness()
 
 #removes uneeded columns
 cleanFile <- function(afile){
@@ -28,13 +23,13 @@ cleanFile <- function(afile){
 }
 
 #filters out non-target genomic data
-cleanTaxon <- function (df){
-  df <- filter(df,grepl("virus",df$Taxonomy)==FALSE)
-  df <- filter(df,grepl("Eukaryota",df$Taxonomy)==FALSE)
-  df <- filter(df,grepl("Archaea",df$Taxonomy)==FALSE)
-  df <- filter(df,grepl("unclassified",df$Taxonomy)==FALSE)
-  return(df)
-}
+#cleanTaxon <- function (df){
+#  df <- filter(df,grepl("virus",df$Taxonomy)==FALSE)
+#  df <- filter(df,grepl("Eukaryota",df$Taxonomy)==FALSE)
+#  df <- filter(df,grepl("Archaea",df$Taxonomy)==FALSE)
+#  df <- filter(df,grepl("unclassified",df$Taxonomy)==FALSE)
+#  return(df)
+#}
 
 t.otu <- function(x, s, e) {
   ## Written by Lee Stanish
@@ -42,123 +37,132 @@ t.otu <- function(x, s, e) {
   ## x=OTU table; s=starting column; e=ending column
   x <- as.data.frame(x) 
   x1 <- t(x[,c(s:e)])      # transpose OTU counts
-  colnames(x1) <- x[,1]     #replace OTU ids as column names 
-  x1
+  colnames(x1) <- x[,1]    #replace OTU ids as column names
+  row.names(x1) <- colnames(x[2]) #added line to keep sample ID's attached to datasets -- FJ
+  return(x1)
 }
 
 #---------------------------------------------------------------------------------------------------------------------
 #Run main script
 
 ## Set working directory
-if (file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")){
-  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")
-} else if (file.exists(
-  "/Users/lstanish/Github/NEON-Internship-2016")){
-  setwd("/Users/lstanish/Github/NEON-Internship-2016")
+
+if(file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/functionTables/MGdata")){
+  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/functionTables/MGdata")
+  directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/functionTables/MGdata")
+} else if (file.exists("/Users/lstanish/Github/NEON-Internship-2016")){
+  setwd("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata/")
+  directory <- "/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata/"
 } else {
-  print("Error! No such directory.")
+  print("Error! No such directories.")
 }
 
 
 #read in file with ID mapping info
-IDfile <- read.csv("SampleID_metadata/ID_mapping_file.csv")
+#IDfile <- read.csv("SampleID_metadata/ID_mapping_file.csv")
 
 #remove uneeded columns
-IDfile <- IDfile[,-1]
+#IDfile <- IDfile[,-1]
 
-#tell R where to look for things
-if (file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")){
-  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")
-  directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")
-  } else if (file.exists("/Users/lstanish/Github/NEON-Internship-2016")){
-  setwd("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata/")
-  directory <- "/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata/"
-  } else {
-  print("Error! No such directory.")
-}
 
 files <- list.files(directory, full.names = FALSE)
 
-file1 <- read.table(files[1],quote = "", sep='\t',header=TRUE, skip = 2)
-file2 <- read.table(files[2],quote = "", sep='\t',header=TRUE, skip = 2)
+file1 <- read.table(files[1],quote = "", sep='\t',header=TRUE, skip = 2, fill=TRUE)
+file2 <- read.table(files[2],quote = "", sep='\t',header=TRUE, skip = 2, fill=TRUE)
 
 file1 <- cleanFile(file1)
 file2 <- cleanFile(file2)
 
+flipped_file1 <- as.data.frame(t.otu(x=file1,s=2,e=2))
+flipped_file2 <- as.data.frame(t.otu(x=file2,s=2,e=2))
 
 #combine first two files
-MGotu <- as.data.frame(mergeData(file1,file2))
+MGfunc <- as.data.frame(plyr::join(flipped_file1,flipped_file2,type="full",match="all"))
 
 END <- length(files)
 
+#create vector for sample IDs
+sample_names <- rep(NA, END)
+sample_names[1] <- row.names(flipped_file1)
+sample_names[2] <- row.names(flipped_file2)
+
 #read in and merge remaining files
 for (i in 3:END){
-  tempfile <- read.table(files[i], quote = "", sep="\t", skip = 2,header = TRUE)
+  tempfile <- read.table(files[i], quote = "", sep="\t", skip = 2,header = TRUE, fill=TRUE)
   tempfile <- cleanFile(tempfile)
-  MGotu <- as.data.frame(mergeData(MGotu,tempfile))
+  flip_temp <- as.data.frame(t.otu(x=tempfile,s=2,e=2))
+  sample_names[i] <- row.names(flip_temp)
+  MGfunc <- as.data.frame(plyr::join(MGfunc,flip_temp,type="full",match="all"))
 }
 
 #filter unwanted data
-MGotu <- cleanTaxon(MGotu)
+#MGotu <- cleanTaxon(MGotu)
 
-#transpose columns and rows and organize to prep for diversity analysis
-MGotu_flip <- t.otu(x=MGotu,s=2,e=(END + 1))
-MGotu_flip <- Sort(by=row.names,data=MGotu_flip)
+row.names(MGfunc) <- sample_names #attach indentifiers
+MGfunc[is.na(MGfunc)] <- 0 #replace NAs with 0s
+
+write.csv(MGfunc,"Joined_Indiv_func_table.csv")
+
+obj <- read.csv("Joined_Indiv_func_table.csv")
+
+#organize to prep for diversity analysis
+MGfunc_flip <- Sort(by=row.names,data=MGfunc_flip)
 
 
 #repeat process for composite data
-if(file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")) {
-  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
-  directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
-}else if(file.exists("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")) {
-  setwd("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
-  directory <- ("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/OTUtables/Cdata")
+if(file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/functionTables/Cdata")) {
+  setwd("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/functionTables/Cdata")
+  directory <- ("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/functionTables/Cdata")
+} else if(file.exists("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/functionTables/Cdata")) {
+  setwd("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/functionTables/Cdata")
+  directory <- ("/Users/lstanish/Github/NEON-Internship-2016/metagenome_tables/functionTables/Cdata")
 } else {
   print("Error! No such directory.")
 }
 
 files <- list.files(directory, full.names = FALSE)
 
-file1 <- read.table(files[1],quote = "", sep='\t', skip = 2, header=TRUE)
-file2 <- read.table(files[2],quote = "", sep="\t", skip = 2, header = TRUE)
+file1 <- read.table(files[1],quote = "", sep='\t', skip = 2, header=TRUE, fill=TRUE)
+file2 <- read.table(files[2],quote = "", sep="\t", skip = 2, header = TRUE, fill=TRUE)
 file1 <- cleanFile(file1)
 file2 <- cleanFile(file2)
-Cotu <- mergeData(file1,file2)
+Cfunc <- mergeData(file1,file2)
 
 END2 <- length(files)
 
 for (i in 3:END2){
-  tempfile <- read.table(files[i], quote = "", sep="\t", skip = 2, header = TRUE)
+  tempfile <- read.table(files[i], quote = "", sep="\t", skip = 2, header = TRUE, fill=TRUE)
   tempfile <- cleanFile(tempfile)
-  Cotu <- mergeData(Cotu,tempfile)
+  Cfunc <- mergeData(Cfunc,tempfile)
 }
 
-Cotu <- cleanTaxon(Cotu)
-Cotu_flip <- t.otu(x=Cotu,s=2,e=(END2+1))
-Cotu_flip <- Sort(by=row.names,data=Cotu_flip)
+#Cotu <- cleanTaxon(Cotu)
+
+Cfunc_flip <- t.otu(x=Cotu,s=2,e=(END2+1))
+Cfunc_flip <- Sort(by=row.names,data=Cotu_flip)
 
 #----------------------------------------------------------------------------------------------------------------------
 ##### Diversity analyses on all 38 files for each sample method #####
 
 Cdiv <- (rep(0,END2))
-abundanceC <- (rep(0,END2))
+evennessC <- (rep(0,END2))
 for (i in 1:(END2)){
-  Cdiv[i] <- diversity(as.numeric(Cotu_flip[i,]))
-  abundanceC[i] <- specnumber(Cotu_flip[i,])
+  Cdiv[i] <- diversity(as.numeric(Cfunc_flip[i,]))
+  evennessC[i] <- evenness(Cfunc_flip[i,]) #change this!!!
 }
 
 MGdiv <- (rep(0,END))
-abundanceM <- (rep(0,END))
+evennessM <- (rep(0,END))
 for (i in 1:(END)){
-  MGdiv[i] <- diversity(as.numeric(MGotu_flip[i,]))
-  abundanceM[i] <- specnumber(MGotu_flip[i,])
+  MGdiv[i] <- diversity(as.numeric(MGfunc_flip[i,]))
+  evennessM[i] <- evenness(MGfunc_flip[i,]) #change this!!!
 }
 
 #convert diversity measures to data frames
 Cdiv <- as.data.frame(Cdiv)
 MGdiv <- as.data.frame(MGdiv)
-abundanceC <- as.data.frame(abundanceC)
-abundanceM <- as.data.frame(abundanceM)
+evennessC <- as.data.frame(evennessC)
+evennessM <- as.data.frame(evennessM)
 
 #-----------------------------------------------------------------------------------------------------------------------
 ##### combine data ##### 
@@ -301,5 +305,3 @@ summary(model1)
 summary(model2)
 summary(aShan)
 summary(aSR)
-
-
