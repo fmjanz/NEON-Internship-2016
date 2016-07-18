@@ -225,6 +225,8 @@ metadata$SpeciesRichness <- specRich$speciesRichness
 
 divDF <- divDF[order(divDF$Event_name),] #sort alpha diversity object
 
+#----------------------------------------------------------------------------------------------------------------------
+##### Beta diversity #####
 #merge Individual and Composite OTU tables
 merged_OTU <- plyr::join(MGotu,Cotu, type="full",match="all")
 merged_OTU[is.na(merged_OTU)] <- 0 #replace NAs with 0s
@@ -287,19 +289,19 @@ ggplot(specRich,aes(x=plotID,y=speciesRichness)) + facet_wrap(~siteID,3, scales=
 # lm(y ~ x1 + x2 + x3)
 
 ##### Models ##### Best Practice: 10 data points per independent/predictor variable
-model1 <- lm(ShannonIndex ~ siteID + sampleType, data = divDF)
-model2 <- lm(speciesRichness ~ siteID + sampleType, data = specRich)
-# model2 <- lm(ShannonIndex ~ siteID + plotID + sampleType, data = divDF)
-
 
 library("stats")
-aShan <- aov(ShannonIndex ~ siteID + sampleType, data = divDF)
-aSR <- aov(speciesRichness ~ siteID + sampleType, data=specRich)
+aShan <- aov(ShannonIndex ~ siteID * sampleType, data = divDF) #take out TALL
+aSR <- aov(speciesRichness ~ siteID * sampleType, data=specRich)
+
+aShan2 <- aov(ShannonIndex ~ sampleType, data=divDF)
+aSR2 <- aov(speciesRichness ~ siteID, data=specRich)
 
 ##### Summaries
-summary(model1)
-summary(model2)
 summary(aShan)
 summary(aSR)
 
+TukeyHSD(aShan)
+TukeyHSD(aSR2)
 
+#make tables of the overall and the site (?)

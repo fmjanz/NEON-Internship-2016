@@ -16,7 +16,7 @@ import urllib.request, urllib.error, json, os, sys
 import pandas as pd
 
 #set working directory to wherever you want to store the files
-os.chdir("C:\\Users\\fjanz\\Documents\\PythonAPI")
+os.chdir("C:\\Users\\fjanz\\Documents\\GitHub\\NEON-Internship-2016\\PythonAPI")
 
 #this is the base url for using the API to make a matrix call
 url = "http://api.metagenomics.anl.gov/1/matrix/"
@@ -37,6 +37,12 @@ organismCall = url + "organism?id=mgm" + fileID + "&evalue=1&source=RefSeq"
 #make API call for abundance tables
 try:
     opener = urllib.request.urlopen(organismCall)
+except urllib.error.HTTPError as e:
+    print("Error with HTTP request: %d %s\n%s" % (e.code, e.reason, e.read()))
+    sys.exit(255)
+    
+try:
+    opener = urllib.request.urlopen(functionCall)
 except urllib.error.HTTPError as e:
     print("Error with HTTP request: %d %s\n%s" % (e.code, e.reason, e.read()))
     sys.exit(255)
