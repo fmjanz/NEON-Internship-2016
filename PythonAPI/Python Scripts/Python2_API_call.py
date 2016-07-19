@@ -5,18 +5,19 @@ plots a graph using data from the web interface'''
 import urllib2, json, sys, os
 
 os.chdir("C:\\Users\\fjanz\\Documents\\GitHub\\NEON-Internship-2016\\metagenome_tables\\Lvl2FunctionalTables\\")
+
 API_URL = "http://api.metagenomics.anl.gov/1"
 
 # assign parameters
-metagenomes = "4637814.3"
+metagenomes = ["4637814.3", "4637811.3"]
 group_level = "level2"
 result_type = "abundance"
 source = "Subsystems"
 
 # construct API call 
 base_url = API_URL + "/matrix/function"
-base_url = base_url + "?group_level=%s&result_type=%s&source=%s&evalue=15&" % (group_level, result_type, source) + "id=mgm" + metagenomes
-#base_url = base_url + "&".join( [ "id=%s" % m for m in metagenomes ] ) 
+base_url = base_url + "?group_level=%s&result_type=%s&source=%s&evalue=15&" % (group_level, result_type, source)
+base_url = base_url + "&".join( [ "id=mgm%s" % m for m in metagenomes ] ) 
 
 # retrieve the data by sending at HTTP GET request to the MG-RAST API
 sys.stderr.write("Retrieving %s\n" % base_url)
@@ -52,7 +53,7 @@ for i in range( 0, len(rows)):
 sys.stdout.write("\n")
 
 h = { (a, b) : int(c) for (a, b, c) in data }
-fout = open("functionLvl2." + FileID + ".tsv",'w')
+fout = open("functionLvl2Data.tsv",'w')
 fout.write("Taxon\t\n") 
 for j in range(0, len(cols) ):
     fout.write(cols[j]["id"] +"\t\n")
