@@ -26,7 +26,7 @@ fileID = "4637814.3"
 
 #This retrieves a matrix with functional gene information.
 #All of the listed parameters are set to their defaults (see API documentation).
-functionCall = url + "function?hit_type=single&group_level=function&evalue=1&source=Subsystems&result_type=abundance&id=mgm" + fileID 
+functionCall = url + "function?hit_type=single&group_level=level2&evalue=1&source=Subsystems&result_type=abundance&id=mgm" + fileID 
 
 #This retrieves a matrix with taxonomy info and abundance counts.
 #All of the listed parmeters are set to their defaults (see API documentation)

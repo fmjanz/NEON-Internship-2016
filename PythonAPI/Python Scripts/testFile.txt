@@ -1,0 +1,96 @@
+Taxon	
+mgm4637814.3	
+ABC transporters	39	
+ATP synthases	4864	
+Acid stress	407	
+Alanine, serine, and glycine	4209	
+Aminosugars	3	
+Anaerobic degradation of aromatic compounds	1193	
+Arginine; urea cycle, polyamines	4683	
+Aromatic amino acids and derivatives	3122	
+Bacterial cytostatics, differentiation factors and antibiotics	25	
+Bacteriocins, ribosomally synthesized antibacterial peptides	1	
+Biosynthesis of phenylpropanoids	1	
+Biotin	1	
+Branched-chain amino acids	8840	
+CO2 fixation	8819	
+CRISPs	1	
+Capsular and extracellular polysacchrides	116	
+Carbohydrates	190	
+Cell wall of Mycobacteria	234	
+Central carbohydrate metabolism	28723	
+Clustering-based subsystems	1	
+Coenzyme A	1443	
+Coenzyme B	1	
+Cytochrome biogenesis	2428	
+DNA repair	13689	
+DNA replication	1752	
+DNA uptake, competence	1	
+Detoxification	722	
+Di- and oligosaccharides	8362	
+Electron accepting reactions	7088	
+Electron donating reactions	6227	
+Electron transport and photophosphorylation	52	
+Fatty acids	3033	
+Fermentation	2505	
+Flagellar motility in Prokaryota	3515	
+Folate and pterines	14168	
+Glutamine, glutamate, aspartate, asparagine; ammonia assimilation	8696	
+Gram-Negative cell wall components	811	
+Gram-Positive cell wall components	1	
+Heat shock	8315	
+Histidine Metabolism	2142	
+Inorganic sulfur assimilation	1055	
+Isoprenoids	67	
+Lysine, threonine, methionine, and cysteine	7839	
+Metabolism of central aromatic intermediates	619	
+Methylamine utilization	8459	
+Molybdopterin oxidoreductase	1427	
+Monosaccharides	2888	
+One-carbon Metabolism	24580	
+Organic acids	10971	
+Organic sulfur assimilation	2	
+Osmotic stress	15	
+Oxidative stress	3536	
+Pathogenicity islands	5565	
+Peripheral pathways for catabolism of aromatic compounds	10	
+Phages, Prophages	2429	
+Plant Hormones	3635	
+Plant-Prokaryote DOE project	17300	
+Plasmid related functions	1	
+Polysaccharides	5820	
+Probably GTP or GMP signaling related	37	
+Programmed Cell Death and Toxin-antitoxin Systems	4	
+Proline and 4-hydroxyproline	2	
+Protein and nucleoprotein secretion system, Type IV	52	
+Protein biosynthesis	16508	
+Protein degradation	14720	
+Protein folding	15755	
+Protein processing and modification	12626	
+Protein secretion system, Type VI	5746	
+Protein translocation across cytoplasmic membrane	20	
+Proteolytic pathway	3	
+Purines	239	
+Putrescine/GABA utilization cluster-temporal,to add to SSs	16	
+Pyridoxine	645	
+Pyrimidines	5438	
+Pyruvate kinase associated cluster	31	
+Quinone cofactors	397	
+Quorum sensing and biofilm formation	13	
+RNA processing and modification	2811	
+Related to Menaquinone-cytochrome C reductase 	313	
+Resistance to antibiotics and toxic compounds	193	
+Riboflavin, FMN, FAD	1	
+Ribosomal Protein L28P relates to a set of uncharacterized proteins	1	
+Ribosome-related cluster	1321	
+Siderophores	43	
+Sodium Ion-Coupled Energetics	8	
+Spore DNA protection	2	
+Sugar alcohols	228	
+Tetrapyrroles	892	
+Transcription	17856	
+Translation	1	
+Transposable elements	52	
+Two related proteases	1754	
+proteosome related	284	
+
