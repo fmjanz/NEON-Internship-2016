@@ -4,6 +4,7 @@
 	Updated: Jul 19, 2016
 	
 	This script retrieves functional tables from NEON data stored on MG-RAST.
+	Adapted from abundance_table.py from MG-RAST-Tools repository on GitHub.
 	
 '''
 import urllib2, json, sys, os
@@ -25,7 +26,7 @@ metagenomes = IDlist
 group_level = "level2"
 result_type = "abundance"
 source = "Subsystems"
-evalue = "1"
+evalue = "2"
 
 # construct API call 
 base_url = API_URL + "/matrix/function"

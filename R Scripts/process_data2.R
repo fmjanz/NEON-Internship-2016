@@ -1,16 +1,15 @@
 #Frances Janz
-#NEON
+#National Ecological Observatoru Network (NEON)
 #Created: Jun 23, 2016
-#Updated: Jul 08, 2016
+#Updated: Jul 21, 2016
 
-#Script for processing the metagenome files from the contractor 
+#Script for processing abundance tables from MG-RAST
 
 #----------------------------------------------------------------------------------------------------------------------
-#Load libraries and functions
+##### Load libraries and functions #####
 library('stringr')
 library('lessR') #for Sort()
 library('vegan') #ecology functions
-library("dplyr")
 library("plyr") #for join()
 
 #merges two files by a specified column
@@ -62,9 +61,6 @@ if (file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016")){
 
 #read in file with ID mapping info
 IDfile <- read.csv("SampleID_metadata/ID_mapping_file.csv")
-
-#remove uneeded columns
-IDfile <- IDfile[,-1]
 
 #tell R where to look for things
 if (file.exists("C:/Users/fjanz/Documents/GitHub/NEON-Internship-2016/metagenome_tables/OTUtables/MGdata")){
@@ -272,10 +268,25 @@ write.csv(metadata,"Metagenome_beta_div_metadata.csv")
 #----------------------------------------------------------------------------------------------------------------------
 ##### Graphs for alpha diversity ####
 
-
 library("ggplot2")
+
+plotIDs <- stringr::str_sub(row.names(MGdiv),1,8)
+
 ggplot(divDF,aes(x=Event_name,y=ShannonIndex)) + facet_wrap(~siteID,3,scales="free") +
-  geom_bar(aes(fill=sampleType),stat="identity",position="dodge") + scale_fill_manual(values=c("seashell","sandybrown"))
+  geom_bar(aes(fill=sampleType),stat="identity",position="dodge") +
+  scale_fill_manual(values=c("lightsteelblue2","dodgerblue4")) +
+  theme(plot.title=element_text(face="bold"), axis.text.x= element_text(angle=45, hjust = 0.75, vjust = 0.75, size=5.5)) +
+  xlab(NULL) + ylab(NULL) + ylim(0,6.5)
+
+means <- rep(0,6)
+means[1] <- mean(divDF$siteID == "CPER")
+means[2] <- mean(divDF$siteID == "DSNY")
+means[3] <- mean(divDF$siteID == "HARV")
+means[4] <- mean(divDF$siteID == "OSBS")
+means[5] <- mean(divDF$siteID == "STER")
+means[6] <- mean(divDF$siteID == "TALL")
+
+barplot(means)
 
 ggplot(specRich,aes(x=plotID,y=speciesRichness)) + facet_wrap(~siteID,3, scales="free") +
   geom_bar(aes(fill=sampleType),stat="identity",position="dodge") + scale_fill_manual(values=c("seashell","sandybrown"))
