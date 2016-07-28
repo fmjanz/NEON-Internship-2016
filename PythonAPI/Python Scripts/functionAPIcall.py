@@ -4,14 +4,15 @@
 	Updated: Jul 19, 2016
 	
 	This script retrieves functional tables from NEON data stored on MG-RAST.
-	Adapted from abundance_table.py from MG-RAST-Tools repository on GitHub.
+	Adapted from abundance_matrix.py from MG-RAST-Tools repository on GitHub.
 	
 '''
 import urllib2, json, sys, os
 
-os.chdir("C:\\Users\\fjanz\\Documents\\GitHub\\NEON-Internship-2016\\metagenome_tables\\Lvl2FunctionalTables\\")
-
-IDlist = ["4637812.3", "4664901.3", "4637813.3", "4664858.3", "4637811.3", "4637814.3", "4637817.3", "4664891.3", "4637818.3", "4664866.3",
+#os.chdir("C:\\Users\\fjanz\\Documents\\GitHub\\NEON-Internship-2016\\metagenome_tables\\Lvl2FunctionalTables\\")
+os.chdir("C:\\Users\\fjanz\\Documents\\Evalue2_functionalTables")
+  
+IDlist = ["4664858.3", "4637811.3", "4637814.3", "4637817.3", "4664891.3", "4637818.3", "4664866.3",
 "4637816.3", "4637819.3", "4637823.3", "4664889.3", "4637822.3", "4637824.3", "4637821.3", "4637825.3", "4637828.3", "4664890.3", "4637827.3",
 "4637829.3", "4637836.3", "4637837.3", "4637835.3", "4637838.3", "4637834.3", "4637839.3", "4637841.3", "4637843.3", "4637842.3", "4637844.3",
 "4637840.3", "4637845.3", "4637848.3", "4664912.3", "4664918.3", "4664926.3", "4637849.3", "4664870.3", "4664865.3", "4664925.3", "4664897.3",
@@ -22,11 +23,11 @@ IDlist = ["4637812.3", "4664901.3", "4637813.3", "4664858.3", "4637811.3", "4637
 API_URL = "http://api.metagenomics.anl.gov/1"
 
 # assign parameters
-metagenomes = IDlist
+metagenomes = ["4664858.3","4637811.3"]
 group_level = "level2"
 result_type = "abundance"
 source = "Subsystems"
-evalue = "2"
+evalue = "1"
 
 # construct API call 
 base_url = API_URL + "/matrix/function"
@@ -72,6 +73,8 @@ for i in range(0, len(metagenomes)):
 	#make call
 	full_url = base_url + "?group_level=%s&result_type=%s&source=%s&evalue=%s&" % (group_level, result_type, source, evalue) + "id=mgm" + metagenomes[i]
 	makeAPIcall(metagenomes[i],full_url)
+	
+
 	
 
 

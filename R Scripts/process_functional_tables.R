@@ -327,10 +327,10 @@ ggplot(even,aes(x=plotID,y=Evenness)) + facet_wrap(~siteID,3, scales="free") +
 
 library("stats")
 aShan <- aov(ShannonIndex ~ siteID * sampleType, data = divDF) #take out TALL
-aSR <- aov(speciesRichness ~ siteID * sampleType, data=specRich)
+aSR <- aov(Evenness ~ siteID * sampleType, data=even)
 
 aShan2 <- aov(ShannonIndex ~ sampleType, data=divDF)
-aSR2 <- aov(speciesRichness ~ siteID, data=specRich)
+aSR2 <- aov(Evenness ~ siteID, data=even)
 
 ##### Summaries
 summary(aShan)

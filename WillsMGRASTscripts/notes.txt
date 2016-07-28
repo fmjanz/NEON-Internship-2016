@@ -1,0 +1,24 @@
+Download cygwin and make sure "make" gets installed (it's in the devel list)
+
+##########In the makefile, I changed -table to -matrix###############
+%.refseq.level6.csv:
+	-{ time abundance-table.py RefSeq  species $* > $@ 2> $@.err ; }
+
+%.ss.level3.csv:
+	-{ time abundance-table.py Subsystems level3 $* > $@ 2> $@.err ; }
+#####################################################################
+
+add directory with abundance-matrix.py to sys.path in python
+
+command in cygwin: make -f makefile -j 4 archaic
+
+
+
+%.json: 
+	-{ curl 'http://api.metagenomics.anl.gov/1/metagenome/$*?verbosity=full' > $@; }
+
+
+Target:
+http://api.metagenomics.anl.gov/1/matrix/organism?id=mgm4637814.3&evalue=1&source=RefSeq
+
+API_URL = http://api.metagenomics.anl.gov/1/matrix/

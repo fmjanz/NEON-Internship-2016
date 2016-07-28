@@ -1,0 +1,9 @@
+Uninstall Python 2.7.12 and 3.X
+Install Python 2.7.9, 32 bit
+
+In advanced settings, edit the PYTHONPATH to include exactly: 
+C:\Python27;C:\Python27\Lib\site-packages;C:\Python27\Lib in BOTH system and user environmental variables
+
+Download and install all packages in abundance-matrix.py
+
+Try running the set of files I emailed today
